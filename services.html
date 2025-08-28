@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Services | Darkoum</title>
+  <meta name="description" content="Darkoum — luxury construction, interior design, façades, landscaping, and consulting in Kuwait.">
+  <meta property="og:title" content="Darkoum Services">
+  <meta property="og:description" content="Construction, interiors, façades, landscaping, consulting.">
+  <meta property="og:image" content="images/hero-poster.jpg">
+  <meta property="og:type" content="website">
+  <link rel="canonical" href="services.html">
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --gold: #c49e57;
+      --dark-bg: #111;
+      --dark-alt: #1a1a1a;
+      --light-text: #f8f0e3;
+    }
+
+    body {
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  /* page background image */
+  background: 
+    url('images/building.jpg') center/cover no-repeat fixed,
+    var(--dark-bg);        /* fallback color */
+  color: var(--light-text);
+}
+
+
+    /* Hero */
+    .hero {
+      height: 50vh;
+      background: url('images/services-hero.jpg') center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.6);
+    }
+    .hero h1 {
+      position: relative;
+      color: var(--gold);
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
+      z-index: 1;
+    }
+
+    /* Services Carousel */
+    .services-section {
+      padding: 60px 20px;
+      text-align: center;
+    }
+    .services-section h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5rem;
+      color: var(--gold);
+      margin-bottom: 30px;
+    }
+    .services-carousel {
+      display: flex;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      gap: 20px;
+      padding-bottom: 20px;
+      scrollbar-width: none;
+    }
+    .services-carousel::-webkit-scrollbar { display: none; }
+
+    .service-card {
+      flex: 0 0 220px;
+      background: var(--dark-alt);
+      border-radius: 12px;
+      padding: 20px;
+      scroll-snap-align: start;
+      text-align: center;
+      transition: transform .3s;
+    }
+    .service-card:hover {
+      transform: translateY(-5px);
+    }
+    .service-card img {
+      width: 100%;
+      height: 140px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 12px;
+    }
+    .service-card h3 {
+      margin: 10px 0 6px;
+      color: var(--gold);
+      font-size: 1.1rem;
+    }
+    .service-card p {
+      font-size: 0.9rem;
+      line-height: 1.4;
+    }
+
+    .services-btn {
+      margin-top: 30px;
+    }
+    .services-btn a {
+      display: inline-block;
+      padding: 12px 28px;
+      background: var(--gold);
+      color: #000;
+      border-radius: 30px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: background .3s;
+    }
+    .services-btn a:hover {
+      background: #b49845;
+    }
+
+    /* House Plan */
+    .plan-section {
+      background: var(--dark-alt);
+      margin: 60px 20px;
+      padding: 40px;
+      border-radius: 12px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+      align-items: center;
+    }
+    .plan-section h2 {
+      font-family: 'Playfair Display', serif;
+      color: var(--gold);
+      font-size: 2rem;
+      grid-column: 1 / span 2;
+      margin-bottom: 20px;
+    }
+    .plan-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .plan-list li {
+      display: flex;
+      justify-content: space-between;
+      padding: 6px 0;
+      border-bottom: 1px solid #333;
+      font-size: 0.95rem;
+    }
+    .plan-img {
+      width: 100%;
+      border-radius: 8px;
+      object-fit: cover;
+    }
+    .contact-btn {
+      grid-column: 1 / span 2;
+      text-align: center;
+      margin-top: 20px;
+    }
+    .contact-btn a {
+      display: inline-block;
+      padding: 10px 24px;
+      background: transparent;
+      border: 2px solid var(--gold);
+      color: var(--gold);
+      border-radius: 24px;
+      text-decoration: none;
+      transition: background .3s, color .3s;
+    }
+    .contact-btn a:hover {
+      background: var(--gold);
+      color: #000;
+    }
+
+    @media(max-width:768px) {
+      .plan-section { grid-template-columns: 1fr; }
+    }
+    .services-btn {
+  display: flex;
+  gap: 12px;              /* space between the buttons */
+  justify-content: center;/* center them under the carousel */
+  margin-top: 20px;
+}
+
+.services-btn .btn {
+  padding: 10px 24px;
+  border-radius: 20px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+}
+
+/* Primary = solid gold */
+.services-btn .primary {
+  background: var(--gold);
+  color: #000;
+}
+
+/* Secondary = outlined */
+.services-btn .secondary {
+  background: transparent;
+  border: 2px solid var(--gold);
+  color: var(--gold);
+}
+
+.services-btn .secondary:hover {
+  background: var(--gold);
+  color: #000;
+}
+/* 1) If your header is fixed, reserve its height so the hero content doesn’t slide underneath */
+body {
+  padding-top: 70px;    /* ← match this to your header’s actual height */
+}
+
+/* 2) Enlarge the logo */
+.top-logo img {
+  height: 80px;         /* ← bump up or down as you like */
+  width: auto;
+}
+
+/* 3) Shrink the hero’s overall height */
+.hero {
+  height: 40vh;         /* ← was 50vh, now a bit smaller */
+}
+
+/* 4) Make the dark overlay inset a bit (so it doesn’t span the full hero) */
+.hero::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 10%;             /* ← 10% from top */
+  bottom: 10%;          /* ← 10% from bottom */
+  background: rgba(0,0,0,0.6);
+}
+
+/* 5) (Optional) Give your heading a little extra space from the top of the hero */
+.hero h1 {
+  margin-top: 10px;
+}
+
+  </style>
+</head>
+<body>
+
+<header class="top-header">
+  <nav class="top-nav" role="navigation" aria-label="Main">
+    <div class="top-logo">
+      <a href="index.html">
+        <img src="images/logo-transparent.png" alt="Darkoum logo" class="spinning-logo">
+      </a>
+    </div>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="navPanel" aria-label="Menu">☰</button>
+    <ul id="navPanel" class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="team.html">Our Team</a></li>
+      <li><a href="services.html" class="active">Services</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="booking.html">Book</a></li>
+    </ul>
+  </nav>
+</header>
+
+
+  <!-- Hero -->
+  <section class="hero">
+    <h1>Our Services</h1>
+  </section>
+
+  <!-- Services Carousel -->
+<section class="services-section">
+  <h2>What We Offer</h2>
+  <div class="services-carousel" id="servicesCarousel">
+    <div class="service-card">
+      <img src="images/consulting.jpg" alt="Consulting Service" loading="lazy">
+      <h3>Consulting</h3>
+      <p>Expert advice to kick‑start your project.</p>
+    </div>
+    <div class="service-card">
+      <img src="images/construction.jpg" alt="Construction Service" loading="lazy">
+      <h3>Construction</h3>
+      <p>End‑to‑end build services with uncompromising quality.</p>
+    </div>
+    <div class="service-card">
+      <img src="images/3d-modeling.jpg" alt="3D Modeling Service" loading="lazy">
+      <h3>3D Modeling</h3>
+      <p>Immersive visuals that bring your vision to life.</p>
+    </div>
+    <div class="service-card">
+      <img src="images/facade.jpg" alt="Facade Design Service" loading="lazy">
+      <h3>Facade Design</h3>
+      <p>Striking exteriors that make an impact.</p>
+    </div>
+    <div class="service-card">
+      <img src="images/minimalist.jpg" alt="Minimalist Design Service" loading="lazy">
+      <h3>Minimalist</h3>
+      <p>Clean, refined aesthetics that breathe space.</p>
+    </div>
+    <div class="service-card">
+      <img src="images/traditional.jpg" alt="Traditional Design Service" loading="lazy">
+      <h3>Traditional</h3>
+      <p>Timeless designs rooted in craftsmanship.</p>
+    </div>
+    <div class="service-card">
+      <img src="images/landscaping.jpg" alt="Landscaping Service" loading="lazy">
+      <h3>Landscaping</h3>
+      <p>Lush outdoor environments tailored to you.</p>
+    </div>
+    <div class="service-card">
+      <img src="images/luxury-outdoors.jpg" alt="Luxury Outdoors Service" loading="lazy">
+      <h3>Luxury Outdoors</h3>
+      <p>High‑end exterior living spaces.</p>
+    </div>
+    <div class="service-card">
+      <img src="images/interior-design.jpg" alt="Interior Design Service" loading="lazy">
+      <h3>Interior Design</h3>
+      <p>Elegant interiors crafted for comfort.</p>
+    </div>
+  </div>
+ <div class="services-btn">
+  <a href="booking.html" class="btn primary">Book Appointment</a>
+  <a href="booking.html?visit=true" class="btn secondary">Book a Visit</a>
+</div>
+
+  <!-- House Plan -->
+  <section class="plan-section">
+    <h2>House Plan (92 m²)</h2>
+    <ul class="plan-list">
+      <li><span>Living Room</span><span>21 m²</span></li>
+      <li><span>Dining Room</span><span>9.3 m²</span></li>
+      <li><span>Studio – Kitchen</span><span>9.6 m²</span></li>
+      <li><span>TV Lounge</span><span>9 m²</span></li>
+      <li><span>Master Bedroom</span><span>15.6 m²</span></li>
+      <li><span>Guest Bedroom</span><span>11.1 m²</span></li>
+      <li><span>Bathroom</span><span>8.9 m²</span></li>
+      <li><span>Hallways & Wardrobe</span><span>7.4 m²</span></li>
+    </ul>
+    <img class="plan-img" src="images/house-plan.jpg" alt="House Plan">
+    <div class="contact-btn">
+      <a href="contact.html">Contact Us</a>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+  <div class="footer-container">
+
+    <!-- Left column -->
+    <div class="footer-col footer-about">
+      <img src="images/logo-transparent.png" alt="Darkoum Logo" class="footer-logo">
+      <p class="footer-desc">
+        Darkoum Construction & Consulting—luxury design and build services that bring your vision to life.
+      </p>
+      <div class="footer-social">
+        <a href="https://facebook.com/YourPage"><img src="images/icon-facebook.png" alt="Facebook"></a>
+        <a href="https://instagram.com/YourPage"><img src="images/icon-instagram.png" alt="Instagram"></a>
+      </div>
+    </div>
+
+    <!-- Middle column -->
+    <div class="footer-col footer-links">
+      <h4>Our Store</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="team.html">Our Team</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Right column -->
+    <div class="footer-col footer-contact">
+      <h4>Get In Touch</h4>
+      <p>
+        <img src="images/icon-location.png" alt="" class="icon">
+        123 Business Ave, Kuwait City
+      </p>
+      <p>
+        <img src="images/icon-phone.png" alt="" class="icon">
+        +965 5044 3637
+      </p>
+      <p>
+        <img src="images/icon-email.png" alt="" class="icon">
+        info@darkoum.com
+      </p>
+    </div>
+
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 Darkoum Construction & Consulting</p>
+  </div>
+</footer>
+
+
+  <script src="js/site.js" defer></script>
+</body>
+</html>

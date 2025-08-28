@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Home | Darkoum</title>
+  <meta name="description" content="Darkoum — luxury construction, interior design, façades, landscaping, and consulting in Kuwait.">
+  <meta property="og:title" content="Darkoum | Luxury Construction & Design">
+  <meta property="og:description" content="Luxury construction, interior design, façades, landscaping, and consulting in Kuwait.">
+  <meta property="og:image" content="images/hero-poster.jpg">
+  <meta property="og:type" content="website">
+  <link rel="canonical" href="index.html">
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css"/>
+
+  <style>
+    h3{
+      text-align: center;
+      color: var(--gold);
+      margin: 1rem 0;
+    }
+     
+
+
+    /* Full-page background */
+    body {
+      margin: 0;
+      font-family: 'Open Sans', sans-serif;
+      color: #f8e9c0;
+      background: url('images/building.jpg') no-repeat center center fixed;
+      background-size: cover;
+    }
+
+    /* Header */
+    .site-header .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px;
+    }
+    .site-header .logo img {
+      width: 80px;
+    }
+    .main-nav ul {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+      margin: 0; padding: 0;
+    }
+    .main-nav a {
+      color: inherit; text-decoration: none; font-weight: 600;
+    }
+
+    /* Hero override for video */
+    .hero { height: 100vh; }
+
+    /* Intro Gallery */
+.intro-gallery .container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;  /* text now sits at the top */
+  gap: 2rem;
+  padding: 4rem 0;
+}
+
+
+    .gallery-images { flex: 1; }
+    .gallery-images .big {
+      width: 100%; border-radius: 8px; display: block;
+    }
+    .small-group {
+      display: flex; gap: 1rem; margin-top: 1rem;
+    }
+    .small-group img {
+      width: calc((100% - 2rem)/3);
+      border-radius: 8px; display: block;
+    }
+    .gallery-text { flex: 1; }
+    .gallery-text h2 {
+      font-size: 2rem; color: var(--gold); margin-bottom: 1rem;
+    }
+    .gallery-text p {
+      margin-bottom: 1.5rem;
+    }
+    .gallery-text .btn {
+      padding: 0.75rem 1.5rem; background: var(--gold);
+      color: #000; text-decoration: none; font-weight: 600;
+    }
+
+    /* Services */
+    .service-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+      gap: 2rem; padding: 4rem 0;
+    }
+    .service-card {
+      background: #111; padding: 2rem; text-align: center;
+      border-radius: 8px; text-decoration: none; color: inherit;
+      transition: transform 0.2s;
+    }
+    .service-card:hover { transform: translateY(-5px); }
+   .service-card img {
+  width: 48px;
+  margin-bottom: 1rem;
+
+  /* stronger gold tint */
+  filter: 
+    brightness(0)       /* make the icon shape pure black */
+    sepia(1)            /* full sepia base */
+    hue-rotate(40deg)   /* shift toward yellow */
+    saturate(1200%)      /* super‐rich color */
+    brightness(1)     /* brighten it up */
+    contrast(0);      /* boost the highlights */
+}
+
+    .service-card h3 { margin: 0.5rem 0; }
+    .service-card p { font-size: 0.9rem; }
+    .services-cta {
+      text-align: center; padding-bottom: 4rem;
+    }
+    .services-cta .btn {
+      padding: 0.75rem 1.5rem; background: var(--gold);
+      color: #000; text-decoration: none; font-weight: 600;
+    }
+
+    /* Projects Gallery */
+    .projects-gallery {
+      text-align: center; padding: 4rem 0;
+    }
+    .projects-gallery h2 {
+      color: #f8e9c0; margin-bottom: 2rem;
+      font-size: 2.5rem;
+    }
+    .project-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+      gap: 1rem; margin-bottom: 2rem;
+    }
+    .project-cards img {
+      width: 100%; border-radius: 8px; display: block;
+    }
+    .projects-gallery .btn {
+      padding: 0.75rem 1.5rem; background: var(--gold);
+      color: #000; text-decoration: none; font-weight: 600;
+    }
+
+    /* Footer */
+    .site-footer {
+      background: #111; color: #f8e9c0; padding: 3rem 0;
+    }
+    .footer-container {
+      max-width: 1200px; margin: 0 auto;
+      display: flex; flex-wrap: wrap; gap: 2rem; padding: 0 20px;
+    }
+    .footer-col {
+      flex: 1; min-width: 200px;
+    }
+    .footer-about .footer-logo {
+      width: 100px; margin-bottom: 1rem;
+    }
+    .footer-desc {
+      margin-bottom: 1.5rem; line-height: 1.5;
+    }
+    .footer-social a {
+      display: inline-block; width: 36px; height: 36px;
+      margin-right: 0.5rem;
+    }
+    .footer-social img {
+      width: 100%; filter: brightness(0) invert(1);
+    }
+    .footer-links h4,
+    .footer-contact h4 {
+      margin-bottom: 1rem; font-weight: 600; color: var(--gold);
+    }
+    .footer-links ul {
+      list-style: none; margin: 0; padding: 0;
+    }
+    .footer-links li {
+      margin-bottom: 0.5rem;
+    }
+    .footer-links a {
+      color: inherit; text-decoration: none;
+    }
+    .footer-links a:hover {
+      color: var(--gold);
+    }
+    .footer-contact p {
+      display: flex; align-items: center; margin: 0.5rem 0;
+    }
+    .footer-contact .icon {
+      width: 20px; margin-right: 0.75rem;
+      filter: brightness(0) invert(1);
+    }
+    .footer-bottom {
+      text-align: center; padding: 1rem 0;
+      border-top: 1px solid #222;
+    }
+    /* 1) Give the header a bit more vertical heft */
+.site-header .container {
+  /* was 20px; bump to 25px top/bottom for more breathing room */
+  padding: 25px 20px;
+}
+
+/* 2) Pull down the hero slightly so it doesn’t feel so dominant */
+.hero {
+  /* was 90vh; reduce to 85vh for a touch less height */
+  height: 85vh;
+}
+
+/* 3) (Optional) Scale the main headline down just a hair */
+.hero-content h1 {
+  /* was 3rem; shrink to 2.8rem so it sits more comfortably */
+  font-size: 2.8rem;
+}
+
+  </style>
+</head>
+<body>
+
+  <!-- Unified Header -->
+  <header class="top-header">
+    <nav class="top-nav" role="navigation" aria-label="Main">
+      <div class="top-logo">
+        <a href="index.html">
+          <img src="images/logo-transparent.png" alt="Darkoum logo" class="spinning-logo">
+        </a>
+      </div>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="navPanel" aria-label="Menu">☰</button>
+      <ul id="navPanel" class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="team.html">Our Team</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="booking.html">Book</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Video (spec) -->
+  <section class="hero-video">
+    <video class="hero-video__bg" autoplay muted playsinline loop poster="images/hero-poster.jpg">
+      <source src="videos/hero.webm" type="video/webm">
+      <source src="videos/hero.mp4" type="video/mp4">
+    </video>
+    <div class="hero-video__overlay">
+      <h1>Building amazing architecture design</h1>
+      <div class="hero-cta">
+        <a href="booking.html" class="btn btn-gold">Book Consultation</a>
+        <button class="btn btn-ghost" data-open-promo>Watch Our Work</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Intro Gallery -->
+  <section class="intro-gallery">
+    <div class="container">
+      <div class="gallery-images">
+        <img src="images/intro1.jpg" alt="Main shot of luxury villa facade" class="big" loading="lazy">
+        <!-- <div class="small-group">
+          <img src="images/images/intro2.jpg" alt="Detail 1">
+          <img src="images/images/intro3.jpg" alt="Detail 2">
+          <img src="images/images/intro4.jpg" alt="Detail 3">
+        </div> -->
+      </div>
+   <div class="gallery-text">
+  <h2>We provide the best architect &amp; interior design services</h2>
+  <p>
+    Our signature design process comes standard—refresh, remodel, new, and enjoyable design experience.
+  </p>
+  <p>
+    From your very first consultation through the final walkthrough, our award-winning team delivers
+    personalized solutions tailored to your vision, budget, and timeline.
+  </p>
+  <ul>
+    <li><strong>Custom Designs:</strong> Every space is uniquely crafted to reflect your style.</li>
+    <li><strong>Sustainable Solutions:</strong> Eco-friendly materials and energy-smart technologies.</li>
+    <li><strong>Full-Service Support:</strong> Concept, permits, construction, and finishing touches.</li>
+  </ul>
+  <a href="contact.html" class="btn">More Details</a>
+
+   <div class="small-group">
+    <img src="images/intro2.jpg" alt="Detail 1" loading="lazy">
+    <img src="images/intro3.jpg" alt="Detail 2" loading="lazy">
+    <img src="images/intro4.jpg" alt="Detail 3" loading="lazy">
+  </div>
+ <!-- <h3 class="gallery-text-header">Gallery Highlights</h3>
+<p class="intro-footer-text">
+  Explore our gallery above to see how we blend bold, modern architecture
+  with warm, inviting interiors. From soaring façades to cozy living spaces,
+  every project reflects our commitment to sustainability and timeless design.
+</p> -->
+
+</div>
+
+  </section>
+<h3 class="gallery-text-header">Gallery Highlights</h3>
+<p class="intro-footer-text">
+  Explore our gallery above to see how we blend bold, modern architecture
+  with warm, inviting interiors. From soaring façades to cozy living spaces,
+  every project reflects our commitment to sustainability and timeless design.
+</p>
+
+  <!-- Highlighted Services -->
+  <section class="service-cards container">
+    <a href="specialists.html" class="service-card">
+      <img src="images/icon-construction.png" alt="Architecture">
+      <h3>Architecture</h3>
+      <p>Expert planning and structural design.</p>
+    </a>
+    <a href="specialists.html" class="service-card">
+      <img src="images/icon-interior.png" alt="Interior Work">
+      <h3>Interior Work</h3>
+      <p>Custom interiors tailored to your taste.</p>
+    </a>
+    <a href="specialists.html" class="service-card">
+      <img src="images/icon-design.png" alt="Renovation">
+      <h3>Renovation</h3>
+      <p>Modern updates for existing spaces.</p>
+    </a>
+    <a href="specialists.html" class="service-card">
+      <img src="images/icon-facade.png" alt="Decor &amp; Art">
+      <h3>Decor &amp; Art</h3>
+      <p>Artistic finishes that elevate your home.</p>
+    </a>
+    
+  </section>
+   
+  <div class="services-cta">
+    <a href="team.html" class="btn">Meet Our Team</a>
+  </div>
+
+  <!-- Projects Gallery -->
+  <section class="projects-gallery container">
+    <h2>Introducing outstanding new projects</h2>
+    <div class="project-cards">
+      <img src="images/project1.jpg" alt="Modern villa at dusk with warm lighting" loading="lazy">
+      <img src="images/project2.jpg" alt="High-end interior with marble and chandelier" loading="lazy">
+      <img src="images/project3.jpg" alt="Luxury outdoor pool and landscape" loading="lazy">
+      <img src="images/project4.jpg" alt="Contemporary facade with gold highlights" loading="lazy">
+    </div>
+    <a href="about.html" class="btn">Learn More About Us</a>
+  </section>
+
+  <!-- Booking CTA target -->
+  <section id="book" class="container" style="padding:60px 20px;text-align:center;">
+    <h2 style="color:var(--gold);font-family:'Playfair Display',serif;margin-bottom:12px">Ready to start?</h2>
+    <p style="color:#f8e9c0;margin-bottom:18px">Secure your consultation in minutes.</p>
+    <a href="booking.html" class="btn btn-primary">Book Now</a>
+  </section>
+
+  <!-- Promo lightbox (spec) -->
+  <div class="lightbox" id="promoBox" aria-hidden="true" role="dialog" aria-label="Promo video">
+    <button class="lightbox__close" data-close-promo aria-label="Close">×</button>
+    <video class="lightbox__video" controls>
+      <source src="videos/promo.webm" type="video/webm">
+      <source src="videos/promo.mp4" type="video/mp4">
+    </video>
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-container">
+
+      <!-- Left column -->
+      <div class="footer-col footer-about">
+        <img src="images/logo-transparent.png" alt="Darkoum Logo" class="footer-logo">
+        <p class="footer-desc">
+          Darkoum Construction &amp; Consulting—luxury design and build services that bring your vision to life.
+        </p>
+        <div class="footer-social">
+          <a href="https://facebook.com/YourPage">
+            <img src="images/icon-facebook.png" alt="Facebook">
+          </a>
+          <a href="https://instagram.com/YourPage">
+            <img src="images/icon-instagram.png" alt="Instagram">
+          </a>
+        </div>
+      </div>
+
+      <!-- Middle column -->
+      <div class="footer-col footer-links">
+        <h4>Our Store</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="team.html">Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Right column -->
+      <div class="footer-col footer-contact">
+        <h4>Get In Touch</h4>
+        <p>
+          <img src="images/icon-location.png" alt="" class="icon">
+          123 Business Ave, Kuwait City
+        </p>
+        <p>
+          <img src="images/icon-phone.png" alt="" class="icon">
+          <a href="tel:+96550443637" style="color:inherit;text-decoration:none">+965 5044 3637</a>
+        </p>
+        <p>
+          <img src="images/icon-email.png" alt="" class="icon">
+          info@darkoum.com
+        </p>
+      </div>
+
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Darkoum Construction &amp; Consulting</p>
+    </div>
+      <!-- Quick contact form -->
+      <div class="footer-col footer-quick">
+        <h4>Quick Contact</h4>
+        <form id="footerQuickForm" novalidate>
+          <div class="floating-group" style="margin-bottom:10px;">
+            <input id="qname" name="name" type="text" placeholder=" " aria-label="Your name" required>
+            <label for="qname">Your Name</label>
+          </div>
+          <div class="floating-group" style="margin-bottom:10px;">
+            <input id="qphone" name="phone" type="tel" placeholder=" " aria-label="Phone" required>
+            <label for="qphone">Phone</label>
+          </div>
+          <button class="btn btn-primary" type="submit">Send</button>
+        </form>
+      </div>
+
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Darkoum Construction &amp; Consulting</p>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="js/site.js" defer></script>
+
+</body>
+</html>

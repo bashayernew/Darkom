@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Us | Darkoum</title>
+  <meta name="description" content="Darkoum — luxury construction, interior design, façades, landscaping, and consulting in Kuwait.">
+  <meta property="og:title" content="About Darkoum">
+  <meta property="og:description" content="Luxury construction, interiors, façades, landscaping, and consulting.">
+  <meta property="og:image" content="images/hero-poster.jpg">
+  <meta property="og:type" content="website">
+  <link rel="canonical" href="about.html">
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css"/>
+  <style>
+    .page-heading {
+      text-align: center;
+      padding: 60px 20px 30px;
+      font-family: 'Playfair Display', serif;
+    }
+
+    .page-heading h1 {
+      font-size: 3.5rem;
+      color: var(--gold);
+      text-shadow: 0 0 8px rgba(212, 175, 55, 0.4);
+    }
+
+    .top-header {
+      background: url('images/bg6.jpg') no-repeat center center/cover;
+      height: 320px;
+      position: relative;
+      width: 100%;
+      z-index: 1;
+    }
+
+    .top-header::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.6);
+      z-index: 0;
+    }
+
+    .top-nav {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      padding: 20px 40px;
+      background-color: transparent;
+      z-index: 2;
+      border-bottom: none;
+    }
+
+    .top-logo {
+      position: absolute;
+      left: 40px;
+      top: 20px;
+    }
+
+    .top-logo img {
+      width: 80px;
+      filter: drop-shadow(0 0 5px var(--gold));
+    }
+
+    .spacer {
+      height: 60px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Title for About Page -->
+  <div class="page-heading">
+    <h1>About Us</h1>
+  </div>
+
+  <!-- Top Header with Background Image -->
+<header class="top-header">
+  <nav class="top-nav" role="navigation" aria-label="Main">
+    <div class="top-logo">
+      <a href="index.html">
+        <img src="images/logo-transparent.png" alt="Darkoum logo" class="spinning-logo" />
+      </a>
+    </div>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="navPanel" aria-label="Menu">☰</button>
+    <ul id="navPanel" class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html" class="active">About Us</a></li>
+      <li><a href="team.html">Our Team</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="booking.html">Book</a></li>
+    </ul>
+  </nav>
+</header>
+
+  <!-- Reduced Spacer -->
+  <div class="spacer"></div>
+
+  <!-- About Intro with Image -->
+  <section class="about-hero-flex">
+    <div class="about-hero-text">
+      <h1>Take control of your vision</h1>
+      <p>Darkoum helps you turn ambition into structure — with luxury, precision, and purpose. We design and build what others only imagine.</p>
+    </div>
+    <div class="about-hero-image">
+      <img src="images/team-main.jpg" alt="Team meeting in luxury conference room" loading="lazy">
+    </div> 
+  </section>
+
+ <!-- Side‑by‑Side Duo Section -->
+<section class="about-image-text duo">
+  <div class="duo-images">
+    <img src="images/building1.jpg" alt="Modern luxury villa exterior" loading="lazy">
+    <img src="images/interior.jpg" alt="Elegant living room with marble flooring" loading="lazy">
+  </div>
+  <div class="duo-text">
+    <h2>Discover a World of Design & Construction</h2>
+    <p>
+      From façades and landscapes to interiors and full structural execution — we combine art and engineering to serve your goals. Our style ranges from minimal to traditional, always refined.
+    </p>
+  </div>
+</section>
+
+  <!-- Parallax Section -->
+  <section class="parallax-section" style="background-image:url('images/building.jpg');">
+    <div class="parallax-inner" data-aos="fade-up">
+      <h2>Where craftsmanship meets innovation</h2>
+      <p>We shape spaces with precision and purpose—elevating every project through detail, materials, and technology.</p>
+    </div>
+  </section>
+
+
+  <!-- Industries We Serve -->
+  <section class="industry-scroll">
+    <div class="industry-track">
+      <div class="industry"><img src="images/icon-construction.png" alt="Construction"><p>Construction</p></div>
+      <div class="industry"><img src="images/icon-interior.png" alt="Interior Design"><p>Interior Design</p></div>
+      <div class="industry"><img src="images/icon-outdoor.png" alt="Luxury Outdoors"><p>Luxury Outdoors</p></div>
+      <div class="industry"><img src="images/icon-landscape.png" alt="Landscaping"><p>Landscaping</p></div>
+      <div class="industry"><img src="images/icon-facade.png" alt="Façade"><p>Façade</p></div>
+      <div class="industry"><img src="images/icon-traditional.png" alt="Traditional"><p>Traditional</p></div>
+      <div class="industry"><img src="images/icon-minimalist.png" alt="Minimalist"><p>Minimalist</p></div>
+      <div class="industry"><img src="images/icon-model.png" alt="3D Modeling"><p>3D Modeling</p></div>
+
+      <!-- Repeat icons -->
+      <div class="industry"><img src="images/icon-construction.png" alt="Construction"><p>Construction</p></div>
+      <div class="industry"><img src="images/icon-interior.png" alt="Interior Design"><p>Interior Design</p></div>
+      <div class="industry"><img src="images/icon-outdoor.png" alt="Luxury Outdoors"><p>Luxury Outdoors</p></div>
+      <div class="industry"><img src="images/icon-landscape.png" alt="Landscaping"><p>Landscaping</p></div>
+      <div class="industry"><img src="images/icon-facade.png" alt="Façade"><p>Façade</p></div>
+      <div class="industry"><img src="images/icon-traditional.png" alt="Traditional"><p>Traditional</p></div>
+      <div class="industry"><img src="images/icon-minimalist.png" alt="Minimalist"><p>Minimalist</p></div>
+      <div class="industry"><img src="images/icon-model.png" alt="3D Modeling"><p>3D Modeling</p></div>
+    </div>
+  </section>
+
+  <!-- Team Carousel Section -->
+  <section class="investment-section">
+    <h2>Our Professional Team</h2>
+    <p class="investment-subtitle">Scroll through our expert team that brings your vision to life.</p>
+
+    <div class="team-container">
+      <div class="team-carousel">
+        <div class="team-member">
+          <img src="images/team1.jpg" alt="Ali Hassan" />
+          <h3>Ali Hassan</h3>
+          <div class="role">Project Manager</div>
+          <p class="bio">Ensures projects align with vision, budget, and execution timeline.</p>
+        </div>
+        <div class="team-member">
+          <img src="images/team2.jpg" alt="Lina Salem" />
+          <h3>Lina Salem</h3>
+          <div class="role">Interior Architect</div>
+          <p class="bio">Creates elegant, functional, and unique interiors tailored to each client.</p>
+        </div>
+        <div class="team-member">
+          <img src="images/team3.jpg" alt="Omar Qassem" />
+          <h3>Omar Qassem</h3>
+          <div class="role">Landscape Designer</div>
+          <p class="bio">Designs vibrant outdoor spaces blending nature and structure.</p>
+        </div>
+        <div class="team-member">
+          <img src="images/team4.jpg" alt="Sarah Al-Fulan" />
+          <h3>Sarah Al-Fulan</h3>
+          <div class="role">3D Visualizer</div>
+          <p class="bio">Translates concepts into immersive 3D models for better decision-making.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="team-description">
+      Our strength lies in our diversity — engineers, designers, and visionaries working as one.
+    </div>
+
+    <a href="team.html" class="learn-more-link">Meet the Full Team</a>
+  </section>
+
+  <!-- START shared footer -->
+<footer class="site-footer">
+  <div class="footer-container">
+
+    <div class="footer-col footer-about">
+      <img src="images/logo-transparent.png" alt="Darkoum Logo" class="footer-logo">
+      <p class="footer-desc">
+        Darkoum Construction & Consulting—luxury design and build services that bring your vision to life.
+      </p>
+      <div class="footer-social">
+        <a href="#"><img src="images/icon-facebook.png" alt="Facebook"></a>
+        <a href="#"><img src="images/icon-instagram.png" alt="Instagram"></a>
+      </div>
+    </div>
+
+    <div class="footer-col footer-links">
+      <h4>Our Store</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="team.html">Our Team</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col footer-contact">
+      <h4>Get In Touch</h4>
+      <p><img src="images/icon-location.png" class="icon" alt="">123 Business Ave, Kuwait City</p>
+      <p><img src="images/icon-phone.png" class="icon" alt="">+965 50443637</p>
+      <p><img src="images/icon-email.png" class="icon" alt="">info@darkoum.com</p>
+    </div>
+
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 Darkoum Construction & Consulting</p>
+  </div>
+</footer>
+<!-- END shared footer -->
+
+
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="js/site.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,901 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Flatpickr Calendar Plugin -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/themes/dark.css"> <!-- Dark theme -->
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Book Appointment | Darkoum</title>
+  <meta name="description" content="Darkoum — luxury construction, interior design, façades, landscaping, and consulting in Kuwait.">
+  <meta property="og:title" content="Book with Darkoum">
+  <meta property="og:description" content="Schedule a consultation with Darkoum.">
+  <meta property="og:image" content="images/hero-poster.jpg">
+  <meta property="og:type" content="website">
+  <link rel="canonical" href="booking.html">
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+  <style>
+  :root {
+  --gold: #c49e57;   /* your “more golden” color */
+  --dark-alt: #222;  /* background for calendar, inputs, scrollbar track */
+}
+
+  body {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    color: #f8e9c0;
+    background: url('images/team-background.jpg') no-repeat center center fixed;
+    background-size: cover;
+  }
+
+  .page-heading {
+    text-align: center;
+    padding: 60px 20px 30px;
+    font-family: 'Playfair Display', serif;
+  }
+
+  .page-heading h1 {
+    font-size: 3.5rem;
+    color: var(--gold);
+    text-shadow: 0 0 8px rgba(212, 175, 55, 0.4);
+  }
+
+  .top-header {
+    background: url('images/bg6.jpg') no-repeat center center/cover;
+    height: 320px;
+    position: relative;
+    width: 100%;
+    z-index: 1;
+  }
+  .top-header::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 0;
+  }
+
+  .top-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 20px 40px;
+    background-color: transparent;
+    z-index: 2;
+  }
+  .top-logo {
+    position: absolute;
+    left: 40px;
+    top: 20px;
+  }
+  .top-logo img {
+    width: 80px;
+    filter: drop-shadow(0 0 5px var(--gold));
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+  }
+  .nav-links li a {
+    color: #fceabb;
+    text-shadow: 0 0 5px rgba(255, 215, 0, 0.3);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.05rem;
+    transition: 0.3s ease;
+  }
+  .nav-links li a:hover {
+    color: var(--gold);
+  }
+
+  .spacer {
+    height: 60px;
+  }
+
+  .booking-panel {
+    max-width: 600px;
+    margin: auto;
+  }
+
+  .booking-card {
+    background: #111;
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.2);
+  }
+
+  .booking-card h2 {
+    color: var(--gold);
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 20px;
+  }
+
+  .booking-card input,
+  .booking-card select {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    background: #222;
+    color: #fff;
+    border: 1px solid var(--gold);
+    border-radius: 10px;
+  }
+
+  .book-now-button {
+    display: inline-block;
+    padding: 12px 25px;
+    background: var(--gold);
+    color: #000;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+  }
+
+  .button-group {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 15px;
+  }
+
+  .book-now-button.secondary {
+    background: transparent;
+    border: 2px solid var(--gold);
+    color: var(--gold);
+  }
+  .book-now-button.secondary:hover {
+    background: var(--gold);
+    color: #000;
+  }
+
+  .confirmation {
+    margin-top: 20px;
+    color: #0f0;
+    font-weight: bold;
+  }
+
+  .carousel-heading {
+    text-align: center;
+    font-size: 2.2rem;
+    margin: 50px 0 20px;
+    color: var(--gold);
+    font-family: 'Playfair Display', serif;
+  }
+
+  .team-carousel {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    padding: 20px 40px;
+    scroll-snap-type: x mandatory;
+  }
+
+  .team-card {
+    flex: 0 0 auto;
+    width: 180px;
+    background: #111;
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: 0 0 8px rgba(212, 175, 55, 0.3);
+    padding: 15px;
+    cursor: pointer;
+    scroll-snap-align: center;
+    transition: transform 0.3s ease;
+  }
+  .team-card:hover {
+    transform: scale(1.05);
+  }
+  .team-card img {
+    width: 100%;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    border: 2px solid var(--gold);
+  }
+
+  .profile-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.85);
+  overflow-y: auto;
+  transform: translateY(-100%);
+  opacity: 0;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+  z-index: 9999;
+}         
+  .profile-content {
+    max-width: 500px;
+    background: #111;
+    padding: 30px;
+    border-radius: 20px;
+    position: relative;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.5);
+  }
+  .profile-content img {
+    width: 120px;
+    border-radius: 50%;
+    border: 3px solid var(--gold);
+    margin-bottom: 15px;
+  }
+  .close-btn {
+    position: absolute;
+    top: 15px; right: 20px;
+    font-size: 2rem;
+    cursor: pointer;
+    color: var(--gold);
+  }
+
+  .contact-footer {
+    text-align: center;
+    padding: 30px;
+    background: rgba(0, 0, 0, 0.85);
+    color: var(--gold);
+    font-size: 0.95rem;
+  }
+  .contact-footer a {
+    color: var(--gold);
+    text-decoration: none;
+    font-weight: 500;
+    margin: 0 5px;
+  }
+  .contact-footer a:hover {
+    text-decoration: underline;
+  }
+  .footer-logo {
+    height: 80px;
+    width: 120px;
+    margin-bottom: 10px;
+    filter: drop-shadow(0 0 4px rgba(212, 175, 55, 0.6));
+  }
+
+  /* === Custom Calendar Style === */
+  .flatpickr-calendar {
+    background: #222;
+    border-radius: 16px;
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.2);
+    border: none;
+    padding: 10px;
+    border-color: var(--gold);
+  }
+  .flatpickr-day {
+    border-radius: 10px;
+  }
+  .flatpickr-day:hover,
+  .flatpickr-day.selected {
+    background: var(--gold);
+    color: #000;
+    font-weight: bold;
+  }
+
+  /* —— INLINE CALENDAR + TIME‑SLOTS LAYOUT —— */
+  .booking-flex {
+    display: flex;
+    gap: 20px;
+    margin: 20px 0;
+  }
+
+  /* INLINE CALENDAR STYLES */
+#quickCalendar,
+#profileCalendar {
+  flex: 1;
+  background: #222;
+  border: 1px solid var(--gold);
+  border-radius: 8px;
+  padding: 8px;
+}
+
+
+  .time-slots {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex-shrink: 0;
+  }
+  .time-slots label {
+    display: block;
+    cursor: pointer;
+  }
+  .time-slots input {
+    display: none;
+  }
+  .time-slots span {
+    display: block;
+    padding: 12px;
+    background: #111;
+    border: 1px solid var(--gold);
+    border-radius: 6px;
+    color: #f8e9c0;
+    text-align: center;
+    transition: background 0.2s, color 0.2s;
+  }
+  .time-slots input:checked + span {
+    background: var(--gold);
+    color: #000;
+  }
+  .team-section {
+    background-color: transparent !important;
+  }
+ /* Overlay covers full screen and starts hidden off‑top */
+.profile-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.85);
+  overflow-y: auto;
+  transform: translateY(-100%);
+  opacity: 0;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+  z-index: 9999;
+}
+
+/* When open, slide in */
+.profile-overlay.open {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+
+/* Center and constrain content */
+.profile-content {
+  background: var(--dark-bg);
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 12px;
+  max-width: 800px;
+  width: 90%;
+  box-shadow: 0 0 30px rgba(0,0,0,0.7);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Close button styling */
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  background: none;
+  border: none;
+  color: var(--gold);
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+/* Name & phone fields row */
+.profile-form-fields {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+.profile-form-fields input {
+  flex: 1;
+  padding: 8px 12px;
+  font-size: 0.95rem;
+  background: var(--dark-alt);
+  color: #f8f0e3;
+  border: 1px solid var(--gold);
+  border-radius: 6px;
+}
+
+/* Two‑column main area */
+.profile-main {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+.profile-info {
+  flex: 1;
+  min-width: 200px;
+  text-align: center;
+}
+.profile-info img {
+  width: 100px; height: 100px;
+  border-radius: 50%;
+  border: 3px solid var(--gold);
+  margin-bottom: 12px;
+}
+.profile-info h2 {
+  color: var(--gold);
+  font-size: 1.3rem;
+  margin: 6px 0;
+}
+.profile-info p {
+  color: #f8f0e3;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  margin-bottom: 8px;
+}
+
+/* Calendar + time‑slots (right) */
+.booking-flex {
+  flex: 1;
+  min-width: 260px;
+  display: flex;
+  gap: 12px;
+}
+.booking-flex > #profileCalendar {
+  flex: 1;
+  background: var(--dark-alt) !important;
+  border: 1px solid var(--gold) !important;
+  border-radius: 8px !important;
+}
+.time-slots {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.time-slots label {
+  cursor: pointer;
+}
+.time-slots span {
+  display: block;
+  padding: 8px 12px;
+  background: var(--dark-alt);
+  border: 1px solid var(--gold);
+  border-radius: 6px;
+  font-size: 0.9rem;
+  color: #f8f0e3;
+  text-align: center;
+  transition: background 0.2s;
+}
+.time-slots input:checked + span {
+  background: var(--gold);
+  color: #111;
+}
+
+/* —— ACTION BUTTONS —— */
+.profile-buttons {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  margin-top: 16px;
+}
+.book-now-button {
+  padding: 10px 24px;
+  border-radius: 20px;
+}
+.book-now-button.secondary {
+  padding: 10px 24px;
+}
+/* Allow the content box to scroll internally if tall */
+.profile-content {
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+/* Bring the name/phone row down */
+.profile-form-fields {
+  margin: 40px 0 20px;  /* 40px top gives space under the × */
+}
+
+/* Ensure the close button is on top */
+.close-btn {
+  z-index: 10;
+}
+
+/* Keep time‑slots and calendar fully visible */
+.booking-flex {
+  gap: 16px;            /* a bit more breathing room */
+}
+
+/* Shrink time‑slot labels so they never get cut off */
+.time-slots span {
+  padding: 6px 10px;
+  font-size: 0.85rem;
+}
+
+/* Make overlay clicks close panel */
+.profile-overlay {
+  cursor: pointer;
+}
+.profile-content {
+  cursor: auto;        /* only the backdrop is clickable */
+}
+/* 1) Give more weight to the profile column */
+.profile-main {
+  display: flex;
+  gap: 24px;
+  flex-wrap: nowrap;       /* prevent wrapping */
+  margin-bottom: 20px;
+}
+
+.profile-info {
+  flex: 2;                 /* grow bigger */
+  min-width: 240px;
+}
+
+.booking-flex {
+  flex: 3;                 /* still roomy for calendar + slots */
+  display: flex;
+  gap: 16px;
+  align-items: flex-start; /* align both children to top */
+}
+
+/* 2) Ensure time‑slots sit level with the calendar */
+.time-slots {
+  max-height: 60vh;
+  overflow-y: auto;
+  align-self: flex-start;  /* stick to top */
+}
+
+/* 3) Turn the calendar’s month header gold */
+.flatpickr-months {
+  background: var(--gold) !important;
+}
+.flatpickr-current-month,
+.flatpickr-prev-month, 
+.flatpickr-next-month {
+  color: #111 !important;
+}
+
+/* Optional: darken the grid below the header so it contrasts */
+.flatpickr-weekdays {
+  background: var(--dark-alt) !important;
+}
+
+/* Make selected day pop on gold */
+.flatpickr-day.selected {
+  background: var(--gold) !important;
+  color: #111 !important;
+}
+:root {
+  --gold: #c49e57;
+  --dark-alt: #222;
+}
+
+/* —— GOLDEN SCROLLBAR FOR THE WHOLE PAGE —— */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--dark-alt);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--gold);
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: darken(var(--gold), 10%);
+}
+
+/* Firefox */
+html {
+  scrollbar-width: thin;
+  scrollbar-color: var(--gold) var(--dark-alt);
+}
+
+/* —— FLATPICKR HEADER & WEEKDAY ROW —— */
+/* Month/year banner */
+.flatpickr-months {
+  background: var(--gold) !important;
+}
+
+/* Weekday names row */
+.flatpickr-weekdays {
+  background: var(--gold) !important;
+}
+.flatpickr-weekday {
+  color: #111 !important;
+}
+/* At the bottom of your stylesheet */
+.time-slots {
+  margin-top: 16px;   /* adjust as you like */
+}
+/* Hide any empty child inside .booking-flex */
+.booking-flex > div:empty {
+  display: none !important;
+}
+/* Center the two‑column wrapper */
+.profile-main {
+  display: flex;
+  justify-content: center; /* center both children */
+  align-items: flex-start; /* keep them top‑aligned */
+  gap: 24px;
+}
+
+/* Center the calendar + slots within their own flex container */
+.booking-flex {
+  display: flex;
+  justify-content: center; /* center the inner two */
+  align-items: flex-start;
+  gap: 16px;
+  margin: 16px 0;           /* give a little breathing room top/bottom */
+}
+
+</style>
+
+</head>
+<body>
+
+  <!-- Page Heading -->
+  <div class="page-heading">
+    <h1>Book Now</h1>
+  </div>
+
+  <!-- Shared Spinning‑Logo Header -->
+<header class="top-header">
+  <nav class="top-nav" role="navigation" aria-label="Main">
+    <div class="top-logo">  
+      <a href="index.html">
+        <img src="images/logo-transparent.png"
+             alt="Darkoum Logo"
+             class="spinning-logo">
+      </a>
+    </div>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="navPanel" aria-label="Menu">☰</button>
+    <ul id="navPanel" class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="team.html">Our Team</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="booking.html" class="active">Book</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- Spacer to push content below fixed header -->
+<div class="spacer"></div>
+
+
+  <!-- QUICK BOOKING PANEL -->
+<section class="booking-panel">
+  <div class="booking-card">
+    <h2>Quick Booking</h2>
+<form id="quickBookingForm">
+  <!-- 1) Name & Phone -->
+  <input type="text" placeholder="Your Name" required />
+  <input type="tel" placeholder="Phone Number" required />
+
+  <!-- 2) FLEX CONTAINER WITH EXACTLY TWO CHILDREN -->
+  <div class="booking-flex">
+    <!-- ——— Inline calendar ——— -->
+    <div id="quickCalendar"></div>
+
+    <!-- ——— Time‑slots ——— -->
+    <div class="time-slots">
+      <label><input type="radio" name="time" value="09:00"><span>09:00 AM</span></label>
+      <label><input type="radio" name="time" value="10:00"><span>10:00 AM</span></label>
+      <label><input type="radio" name="time" value="11:00"><span>11:00 AM</span></label>
+      <label><input type="radio" name="time" value="12:00"><span>12:00 PM</span></label>
+      <label><input type="radio" name="time" value="16:00"><span>04:00 PM</span></label>
+      <label><input type="radio" name="time" value="17:00"><span>05:00 PM</span></label>
+    </div>
+  </div>
+
+  <!-- 3) Buttons -->
+  <div class="button-group">
+    <button type="submit" class="book-now-button">Book Appointment</button>
+    <button type="button" class="book-now-button secondary">Book Site Visit</button>
+  </div>
+
+  <div id="quickBookingMsg" class="confirmation" style="display: none;" aria-live="polite">
+    ✅ Appointment confirmed!
+  </div>
+</form>
+
+
+  </div>
+</section>
+<iframe width='100%' height='750px' src='https://mishref52585.zohobookings.com/portal-embed#/darkoumgroup' frameborder='0' allowfullscreen='' > </iframe>
+
+  <!-- TEAM CAROUSEL SECTION -->
+  <section class="team-section">
+    <h2 class="carousel-heading">Meet Our Specialists</h2>
+    <div class="team-carousel">
+      <div class="team-card" onclick="openProfile('Ali')">
+        <img src="images/team1.jpg" alt="Ali Hassan">
+        <h3>Ali Hassan</h3>
+        <p>Project Manager</p>
+      </div>
+      <div class="team-card" onclick="openProfile('Lina')">
+        <img src="images/team2.jpg" alt="Lina Salem">
+        <h3>Lina Salem</h3>
+        <p>Interior Architect</p>
+      </div>
+      <div class="team-card" onclick="openProfile('Omar')">
+        <img src="images/team3.jpg" alt="Omar Qassem">
+        <h3>Omar Qassem</h3>
+        <p>Landscape Designer</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FULLSCREEN PROFILE PANEL -->
+<div id="profileOverlay" class="profile-overlay">
+  <div class="profile-content">
+    <button class="close-btn" onclick="closeProfile()">×</button>
+
+    <form id="profileBookingForm">
+      <!-- A) Compact Name & Phone Row -->
+      <div class="profile-form-fields">
+        <input type="text" name="customerName" placeholder="Your Name" required>
+        <input type="tel"  name="customerPhone" placeholder="Phone Number" required>
+      </div>
+
+      <!-- B) Two‑column Main Area -->
+      <div class="profile-main">
+        <!-- 1) Profile Info on Left -->
+        <div class="profile-info">
+          <img id="profileImage" src="" alt="Team Member">
+          <h2 id="profileName">Name Here</h2>
+          <p id="profileRole">Role Here</p>
+          <p id="profileBio">Short bio goes here…</p>
+        </div>
+
+        <!-- 2) Calendar + Time Slots on Right -->
+        <div class="booking-flex">
+          <div id="profileCalendar"></div>
+          <div class="time-slots">
+            <label><input type="radio" name="time" value="09:00"><span>09:00 AM</span></label>
+            <label><input type="radio" name="time" value="10:00"><span>10:00 AM</span></label>
+            <label><input type="radio" name="time" value="11:00"><span>11:00 AM</span></label>
+            <label><input type="radio" name="time" value="12:00"><span>12:00 PM</span></label>
+            <label><input type="radio" name="time" value="16:00"><span>04:00 PM</span></label>
+            <label><input type="radio" name="time" value="17:00"><span>05:00 PM</span></label>
+          </div>
+        </div>
+      </div>
+
+      <!-- C) Action Buttons -->
+      <div class="button-group profile-buttons">
+        <button type="submit" class="book-now-button">Book Appointment</button>
+        <button type="button" class="book-now-button secondary">Book Site Visit</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+
+
+
+    <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-container">
+
+      <!-- Left column -->
+      <div class="footer-col footer-about">
+        <img src="images/logo-transparent.png" alt="Darkoum Logo" class="footer-logo">
+        <p class="footer-desc">
+          Darkoum Construction & Consulting—luxury design and build services that bring your vision to life.
+        </p>
+        <div class="footer-social">
+          <a href="https://facebook.com/YourPage"><img src="images/icon-facebook.png" alt="Facebook"></a>
+          <a href="https://instagram.com/YourPage"><img src="images/icon-instagram.png" alt="Instagram"></a>
+        </div>
+      </div>
+
+      <!-- Middle column -->
+      <div class="footer-col footer-links">
+        <h4>Our Store</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="team.html">Our Team</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Right column -->
+      <div class="footer-col footer-contact">
+        <h4>Get In Touch</h4>
+        <p>
+          <img src="images/icon-location.png" alt="" class="icon">
+          123 Business Ave, Kuwait City
+        </p>
+        <p>
+          <img src="images/icon-phone.png" alt="" class="icon">
+          +965 5044 3637
+        </p>
+        <p>
+          <img src="images/icon-email.png" alt="" class="icon">
+          info@darkoum.com
+        </p>
+      </div>
+
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Darkoum Construction & Consulting</p>
+    </div>
+  </footer>
+
+
+  <!-- Flatpickr JS (if not already loaded) -->
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+<script>
+  // 1) Fully booked dates
+  const fullyBookedDates = ["2025-07-22", "2025-07-25"];
+
+  // 2) Quick‑Booking inline calendar
+  flatpickr("#quickCalendar", {
+    inline: true,
+    dateFormat: "d/m/Y",
+    minDate: "today",
+    theme: "dark",
+    disable: fullyBookedDates
+  });
+
+  // 3) Profile‑modal inline calendar
+  flatpickr("#profileCalendar", {
+    inline: true,
+    dateFormat: "d/m/Y",
+    minDate: "today",
+    theme: "dark",
+    disable: fullyBookedDates
+  });
+
+  // 4) (Optional) Pop‑up calendar if you still use an <input id="profileDate">
+  flatpickr("#profileDate", {
+    dateFormat: "d/m/Y",
+    minDate: "today",
+    theme: "dark",
+    disable: fullyBookedDates
+  });
+
+  // 5) Quick‑Booking form handler
+  document.getElementById("quickBookingForm")
+    .addEventListener("submit", function(e) {
+      e.preventDefault();
+      document.getElementById("quickBookingMsg").style.display = "block";
+      this.reset();
+    });
+
+  // 6) Team‐member profile data & open/close logic
+  const profileData = {
+    Ali: {
+      name: "Ali Hassan",
+      role: "Project Manager",
+      img: "images/team1.jpg",
+      bio: "Oversees full project execution ensuring timely, on‑budget results."
+    },
+    Lina: {
+      name: "Lina Salem",
+      role: "Interior Architect",
+      img: "images/team2.jpg",
+      bio: "Designs luxurious, minimalist, and traditional interiors."
+    },
+    Omar: {
+      name: "Omar Qassem",
+      role: "Landscape Designer",
+      img: "images/team3.jpg",
+      bio: "Creates elegant outdoor environments that blend with architecture."
+    }
+  };
+
+ 
+
+
+  const overlay = document.getElementById("profileOverlay");
+
+  function openProfile(member) {
+    const data = profileData[member];
+    document.getElementById("profileName").innerText = data.name;
+    document.getElementById("profileRole").innerText = data.role;
+    document.getElementById("profileImage").src = data.img;
+    document.getElementById("profileBio").innerText = data.bio;
+    overlay.classList.add("open");
+  }
+
+  function closeProfile() {
+    overlay.classList.remove("open");
+  }
+
+  // Close when clicking outside the content box
+  overlay.addEventListener("click", (e) => {
+    if (e.target === overlay) {
+      closeProfile();
+    }
+  });
+</script>
+<script src="js/site.js" defer></script>
