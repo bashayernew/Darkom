@@ -157,7 +157,7 @@ const ServicesContent = () => {
                     
                     {/* Features List */}
                     <ul className="space-y-2 mb-6">
-                      {service.features.map((feature, featureIndex) => (
+                      {service.features.map((feature: any, featureIndex: number) => (
                         <li key={featureIndex} className="flex items-center space-x-2">
                           <div className="w-2 h-2 bg-gold rounded-full" />
                           <span className="text-cream/70 text-sm">{feature}</span>

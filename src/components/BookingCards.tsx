@@ -291,7 +291,7 @@ const BookingModal = ({ isOpen, onClose, serviceType }: BookingModalProps) => {
                           {t(`booking.${period}`)}
                         </h5>
                         <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
-                          {(times as string[]).map((time) => (
+                          {Array.isArray(times) ? times.map((time: string) => (
                             <button
                               key={time}
                               type="button"
@@ -304,7 +304,7 @@ const BookingModal = ({ isOpen, onClose, serviceType }: BookingModalProps) => {
                             >
                               {time}
                             </button>
-                          ))}
+                          )) : null}
                         </div>
                       </div>
                     ))}
@@ -428,8 +428,8 @@ const BookingCards = () => {
       description: t('booking.inPersonDesc'),
       icon: <Users className="w-8 h-8 text-gold" />,
       features: t('booking.inPersonFeatures'),
-      benefits: t('booking.inPersonBenefits').map((benefit, index) => ({
-        icon: [<Calendar className="w-6 h-6 text-gold" />, <Clock className="w-6 h-6 text-gold" />, <CheckCircle className="w-6 h-6 text-gold" />, <MapPin className="w-6 h-6 text-gold" />][index],
+      benefits: t('booking.inPersonBenefits').map((benefit: any, index: number) => ({
+        icon: [<Calendar key="calendar" className="w-6 h-6 text-gold" />, <Clock key="clock" className="w-6 h-6 text-gold" />, <CheckCircle key="check" className="w-6 h-6 text-gold" />, <MapPin key="map" className="w-6 h-6 text-gold" />][index],
         text: benefit.text
       }))
     },
@@ -439,8 +439,8 @@ const BookingCards = () => {
       description: t('booking.onlineMeetingDesc'),
       icon: <Video className="w-8 h-8 text-gold" />,
       features: t('booking.onlineFeatures'),
-      benefits: t('booking.onlineBenefits').map((benefit, index) => ({
-        icon: [<Video className="w-6 h-6 text-gold" />, <Clock className="w-6 h-6 text-gold" />, <Users className="w-6 h-6 text-gold" />, <CheckCircle className="w-6 h-6 text-gold" />][index],
+      benefits: t('booking.onlineBenefits').map((benefit: any, index: number) => ({
+        icon: [<Video key="video" className="w-6 h-6 text-gold" />, <Clock key="clock" className="w-6 h-6 text-gold" />, <Users key="users" className="w-6 h-6 text-gold" />, <CheckCircle key="check" className="w-6 h-6 text-gold" />][index],
         text: benefit.text
       }))
     }
@@ -523,7 +523,7 @@ const BookingCards = () => {
                         {service.description}
                       </p>
                       <div className="space-y-2 mb-4">
-                        {service.features.map((feature, idx) => (
+                        {service.features.map((feature: any, idx: number) => (
                           <p key={idx} className="text-xs text-gold/80">• {feature}</p>
                         ))}
                       </div>
