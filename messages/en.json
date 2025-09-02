@@ -1,0 +1,387 @@
+{
+  "navigation": {
+    "home": "Home",
+    "about": "About Us",
+    "services": "Services",
+    "team": "Our Team",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Building amazing",
+    "titleHighlight": "architecture design",
+    "subtitle": "Transform your vision into reality with our luxury construction and design services",
+    "cta": "Book Consultation"
+  },
+  "intro": {
+    "title": "Where Vision Meets Reality",
+    "description": "For over a decade, Darkom Construction & Consulting has been transforming dreams into extraordinary spaces across Kuwait. We don't just build structures – we create experiences, craft memories, and build legacies that stand the test of time.",
+    "subDescription": "From luxury residential villas to sophisticated commercial spaces, every project tells a story of passion, precision, and unparalleled craftsmanship. Ready to discover what makes us different?",
+    "whyChoose": "Why Choose Darkom?",
+    "whyChooseText1": "Our success isn't measured by the number of projects we complete, but by the smiles on our clients' faces and the lasting impact we create in their lives.",
+    "whyChooseText2": "We combine cutting-edge technology with traditional craftsmanship, ensuring that every design is not only beautiful but also functional, sustainable, and built to last.",
+    "whyChooseText3": "From the initial concept to the final finishing touches, our expert team brings decades of combined experience to every project, ensuring excellence in every detail.",
+    "ourPromise": "Our Promise to You",
+    "promiseText1": "When you choose Darkom, you're not just hiring a construction company – you're partnering with a team that shares your vision and passion for excellence.",
+    "promiseText2": "We promise transparency in every step, quality that exceeds expectations, and a commitment to delivering your project on time and within budget.",
+    "promiseText3": "Your satisfaction is our success, and we won't rest until you're completely thrilled with the results.",
+    "cta1": "Learn More About Us",
+    "cta2": "Meet Our Team"
+  },
+  "services": {
+    "title": "Our Services",
+    "description": "We offer comprehensive construction and design services that transform your vision into reality. From initial concept to final completion, our expert team ensures every project meets the highest standards of quality and craftsmanship. Discover how we can bring your dream space to life.",
+    "hoverText": "Hover or tap to see details",
+    "architecture": {
+      "title": "Architecture & Design",
+      "description": "Innovative architectural solutions that blend creativity with functionality.",
+      "features": ["Concept Development", "3D Modeling", "Sustainable Design", "Project Planning"]
+    },
+    "interior": {
+      "title": "Interior Design",
+      "description": "Transform spaces with elegant interior solutions that reflect your style.",
+      "features": ["Space Planning", "Color Schemes", "Furniture Selection", "Lighting Design"]
+    },
+    "interiorFeatures": {
+      "spacePlanning": "Space Planning",
+      "colorSchemes": "Color Schemes", 
+      "furnitureSelection": "Furniture Selection",
+      "lightingDesign": "Lighting Design"
+    },
+    "construction": {
+      "title": "Construction",
+      "description": "Expert construction services with attention to every detail.",
+      "features": ["Quality Materials", "Expert Craftsmanship", "Timeline Management", "Safety Standards"]
+    },
+    "constructionFeatures": {
+      "qualityMaterials": "Quality Materials",
+      "expertCraftsmanship": "Expert Craftsmanship",
+      "timelineManagement": "Timeline Management",
+      "safetyStandards": "Safety Standards"
+    },
+    "consulting": {
+      "title": "Consulting",
+      "description": "Professional guidance for your construction and design projects.",
+      "features": ["Project Assessment", "Cost Analysis", "Regulatory Compliance", "Risk Management"]
+    },
+    "consultingFeatures": {
+      "projectAssessment": "Project Assessment",
+      "costAnalysis": "Cost Analysis",
+      "regulatoryCompliance": "Regulatory Compliance",
+      "riskManagement": "Risk Management"
+    },
+    "facade": {
+      "title": "Facade & Exterior",
+      "description": "Stunning exterior designs that make lasting impressions.",
+      "features": ["Facade Design", "Material Selection", "Structural Engineering", "Installation"]
+    },
+    "landscaping": {
+      "title": "Landscaping",
+      "description": "Beautiful outdoor spaces that complement your architecture.",
+      "features": ["Garden Design", "Hardscaping", "Plant Selection", "Maintenance Plans"]
+    },
+    "modeling3d": {
+      "title": "3D Modeling",
+      "description": "Realistic 3D visualizations of your project before construction.",
+      "features": ["3D Rendering", "Virtual Tours", "Animation", "VR Experience"]
+    },
+    "renovation": {
+      "title": "Renovation",
+      "description": "Modern updates and renovations for existing spaces.",
+      "features": ["Space Planning", "Material Updates", "Structural Modifications", "Interior Refresh"]
+    },
+    "hoverText": "Hover or tap to see details",
+    "learnMore": "Learn More",
+    "cta": "Our Services",
+    "process": {
+      "title": "Our Process",
+      "description": "From concept to completion, we follow a proven process to ensure your project's success",
+      "consultation": {
+        "title": "Consultation",
+        "description": "We discuss your vision, requirements, and budget to understand your project goals."
+      },
+      "conceptDesign": {
+        "title": "Concept Design",
+        "description": "Our team creates initial concepts and 3D visualizations for your approval."
+      },
+      "detailedPlanning": {
+        "title": "Detailed Planning",
+        "description": "We develop comprehensive plans, specifications, and construction documents."
+      },
+      "construction": {
+        "title": "Construction",
+        "description": "Our skilled team brings your vision to life with quality craftsmanship."
+      },
+      "completion": {
+        "title": "Completion",
+        "description": "Final walkthrough and handover of your completed project."
+      }
+    }
+  },
+  "certifications": {
+    "title": "Certifications & Memberships",
+    "description": "Our commitment to excellence is backed by internationally recognized standards and certifications",
+    "whyMatter": "Why These Certifications Matter",
+    "whyMatterDesc": "These international standards demonstrate our commitment to quality, safety, and sustainability in every project we undertake.",
+    "qualityAssured": {
+      "title": "Quality Assured",
+      "description": "ISO 9001 ensures consistent excellence"
+    },
+    "safetyFirst": {
+      "title": "Safety First",
+      "description": "ISO 45001 prioritizes worker safety"
+    },
+    "ecoFriendly": {
+      "title": "Eco-Friendly",
+      "description": "LEED & BREEAM for sustainability"
+    },
+    "iso9001": {
+      "name": "ISO 9001",
+      "description": "International standard for quality management systems, ensuring consistent project excellence."
+    },
+    "iso45001": {
+      "name": "ISO 45001",
+      "description": "Global standard for occupational health & safety, demonstrating our commitment to safe work practices."
+    },
+    "leed": {
+      "name": "LEED Certification",
+      "description": "U.S. Green Building Council's LEED certification for sustainable and energy-efficient construction."
+    },
+    "breeam": {
+      "name": "BREEAM",
+      "description": "Europe's leading sustainability assessment method for master planning projects, infrastructure, and buildings."
+    }
+  },
+  "readyToStart": {
+    "title": "Ready to start?",
+    "description": "Secure your consultation in minutes.",
+    "cta": "Book Now"
+  },
+  "about": {
+    "title": "About Us",
+    "subtitle": "Building dreams into reality with passion, expertise, and unwavering commitment to excellence",
+    "ourStory": "Our Story",
+    "storyText1": "Founded with a vision to transform the construction and design industry, Darkom Construction & Consulting has been at the forefront of innovative architectural solutions for over a decade.",
+    "storyText2": "What started as a small team of passionate architects has grown into a comprehensive design and construction company, serving clients across Kuwait with projects that range from luxury residential villas to sophisticated commercial spaces.",
+    "storyText3": "Our journey has been marked by a commitment to excellence, a passion for innovative design, and an unwavering dedication to client satisfaction.",
+    "ourMission": "Our Mission",
+    "missionText1": "Every project we undertake is a testament to our belief that exceptional spaces have the power to transform lives and create lasting memories for generations to come.",
+    "missionText2": "We combine traditional craftsmanship with cutting-edge technology, ensuring that each design is not only beautiful but also functional, sustainable, and built to last.",
+    "missionText3": "Our commitment extends beyond construction – we're building relationships, communities, and a legacy of excellence that speaks for itself.",
+    "collaborativeExcellence": "Collaborative Excellence",
+    "collaborativeText1": "Our success is built on the foundation of teamwork and collaboration. Every project brings together architects, engineers, designers, and craftsmen who share a common vision of excellence.",
+    "collaborativeText2": "We believe that the best results come from diverse perspectives working in harmony. Our team combines local expertise with international standards, ensuring that every project meets global benchmarks while respecting local traditions and requirements.",
+    "collaborativeText3": "From the initial concept to the final finishing touches, every team member contributes their unique skills and insights to create something truly extraordinary.",
+    "over10Years": "Over 10 Years",
+    "over10YearsDesc": "Of experience in luxury construction and design",
+    "hundredProjects": "100+ Projects",
+    "hundredProjectsDesc": "Successfully completed across Kuwait",
+    "excellence": "Excellence",
+    "excellenceDesc": "In every detail of our work",
+    "ourValues": "Our Values",
+    "valuesDescription": "The principles that guide every decision we make and every project we undertake",
+    "excellenceValue": {
+      "title": "Excellence",
+      "description": "We maintain the highest standards in every project, ensuring exceptional quality and craftsmanship."
+    },
+    "innovationValue": {
+      "title": "Innovation",
+      "description": "We embrace cutting-edge design trends and construction techniques to create unique spaces."
+    },
+    "integrityValue": {
+      "title": "Integrity",
+      "description": "We build trust through honest communication, transparent pricing, and reliable service."
+    },
+    "sustainabilityValue": {
+      "title": "Sustainability",
+      "description": "We prioritize eco-friendly materials and energy-efficient solutions for a better future."
+    },
+    "meetTeam": "Meet Our Expert Team",
+    "meetTeamDesc": "Our talented professionals bring together decades of combined experience in luxury construction, innovative design, and exceptional client service.",
+    "meetTeamCta": "Meet the Team",
+    "readyToWork": "Ready to Work With Our Team?",
+    "readyToWorkDesc": "Let's discuss your project and see how our expert team can bring your vision to life.",
+    "getStartedToday": "Get Started Today",
+    "whyChooseTeam": "Why Choose Our Team?",
+    "whyChooseTeamDesc": "Our team brings together decades of combined experience in luxury construction, innovative design, and exceptional client service.",
+    "expertise": {
+      "title": "Expertise",
+      "description": "Specialized knowledge in luxury residential and commercial projects."
+    },
+    "innovation": {
+      "title": "Innovation",
+      "description": "Cutting-edge design solutions and sustainable building practices."
+    },
+    "reliability": {
+      "title": "Reliability",
+      "description": "Consistent quality and on-time delivery for every project."
+    },
+    "about": "About",
+    "areasOfExpertise": "Areas of Expertise",
+    "keyAchievements": "Key Achievements",
+    "contactInformation": "Contact Information",
+    "readyToStart": "Ready to Start Your Project?",
+    "readyToStartDesc": "Let's discuss your vision and see how our services can bring it to life.",
+    "getStarted": "Get Started",
+    "bookConsultation": "Book Consultation",
+    "readyToStartDesc2": "Let our expert team bring your vision to life with the same level of excellence and attention to detail",
+
+    "teamMembers": {
+      "ahmed": {
+        "name": "Ahmed Al-Rashid",
+        "position": "Founder & CEO",
+        "description": "Visionary leader with over 15 years of experience in luxury construction and design.",
+        "expertise": ["Strategic Planning", "Project Management", "Client Relations"],
+        "fullBio": "Ahmed Al-Rashid is the visionary founder and CEO of Darkom Construction & Consulting. With over 15 years of experience in the luxury construction industry, Ahmed has led the company from its humble beginnings to becoming one of Kuwait's most respected design and construction firms. His expertise spans from strategic planning and project management to client relations and business development. Ahmed's passion for excellence and commitment to innovation has been the driving force behind the company's success.",
+        "achievements": [
+          "Led 50+ luxury residential projects",
+          "Established partnerships with top-tier suppliers",
+          "Received multiple industry awards for excellence",
+          "Mentored 20+ young professionals"
+        ]
+      },
+      "sarah": {
+        "name": "Sarah Al-Mansouri",
+        "position": "Lead Architect",
+        "description": "Award-winning architect specializing in modern luxury residential and commercial projects.",
+        "expertise": ["Architectural Design", "3D Modeling", "Sustainable Design"],
+        "fullBio": "Sarah Al-Mansouri is our award-winning Lead Architect, bringing over 12 years of experience in creating stunning architectural designs. Sarah specializes in modern luxury residential and commercial projects, with a particular focus on sustainable design principles. Her innovative approach combines contemporary aesthetics with functional excellence, ensuring every project not only looks spectacular but also serves its purpose perfectly. Sarah's designs have been featured in several architectural publications and have won multiple design awards.",
+        "achievements": [
+          "Designed 30+ award-winning projects",
+          "Specialized in sustainable architecture",
+          "Published in Architectural Digest",
+          "Speaker at regional design conferences"
+        ]
+      },
+      "mohammed": {
+        "name": "Mohammed Al-Zahra",
+        "position": "Interior Design Director",
+        "description": "Creative designer with a passion for creating stunning, functional living spaces.",
+        "expertise": ["Interior Design", "Space Planning", "Material Selection"],
+        "fullBio": "Mohammed Al-Zahra serves as our Interior Design Director, bringing creativity and innovation to every space he touches. With 10+ years of experience in interior design, Mohammed has a unique ability to transform ordinary spaces into extraordinary environments. His expertise in space planning, material selection, and color theory ensures that every interior not only looks beautiful but also functions perfectly for the people who live and work there. Mohammed's designs reflect a perfect balance of luxury, comfort, and functionality.",
+        "achievements": [
+          "Completed 40+ interior design projects",
+          "Expert in luxury residential interiors",
+          "Certified in sustainable materials",
+          "Featured in Interior Design Magazine"
+        ]
+      },
+      "fatima": {
+        "name": "Fatima Al-Khalil",
+        "position": "Project Manager",
+        "description": "Experienced project manager ensuring timely delivery and quality control.",
+        "expertise": ["Project Coordination", "Timeline Management", "Quality Assurance"],
+        "fullBio": "Fatima Al-Khalil is our dedicated Project Manager, ensuring that every project is delivered on time, within budget, and to the highest quality standards. With 8+ years of experience in construction project management, Fatima excels at coordinating complex projects, managing timelines, and maintaining quality control throughout the construction process. Her attention to detail and strong communication skills make her an invaluable team member who ensures client satisfaction at every stage of the project.",
+        "achievements": [
+          "Managed 25+ construction projects",
+          "100% on-time delivery rate",
+          "Certified Project Management Professional",
+          "Reduced project costs by 15% average"
+        ]
+      }
+    }
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "Get in touch with our expert team to discuss your project requirements",
+    "getInTouch": "Get In Touch",
+    "getInTouchDesc": "Ready to start your next project? Contact us today and let our expert team help you bring your vision to life with exceptional quality and craftsmanship.",
+    "emailUs": "Email Us",
+    "callUs": "Call Us",
+    "whatsapp": "WhatsApp",
+    "chatWhatsapp": "Chat on WhatsApp",
+    "headOffice": "Head Office",
+    "followSocial": "Follow our social media",
+    "sendMessage": "Send us a Message",
+    "fullName": "Full Name",
+    "phoneNumber": "Phone Number",
+    "emailAddress": "Email Address",
+    "subject": "Subject",
+    "message": "Message",
+    "sendMessageCta": "Send Message",
+    "sendingMessage": "Sending Message...",
+    "messageSent": "Thank you! Your message has been sent successfully.",
+    "bookConsultation": "Book Your Consultation",
+    "bookConsultationDesc": "Choose between an in-person consultation or an online meeting that works best for you",
+    "inPerson": "In-Person Consultation",
+    "inPersonDesc": "Meet with our experts face-to-face at our office for a comprehensive project discussion.",
+    "onlineMeeting": "Online Meeting",
+    "onlineMeetingDesc": "Connect with our experts virtually from anywhere via video call for your convenience.",
+    "requestBooking": "Request Booking",
+    "findUs": "Find Us",
+    "findUsDesc": "Visit our head office or get in touch to discuss your project requirements",
+    "openInMaps": "Open in Google Maps",
+    "officeHours": "Office Hours",
+    "officeHoursText": "Sun - Thu: 8:00 AM - 6:00 PM",
+    "officeHoursClosed": "Fri - Sat: Closed",
+    "placeholderFullName": "Enter your full name",
+    "placeholderPhone": "Enter your phone number",
+    "placeholderEmail": "Enter your email address",
+    "placeholderSubject": "Enter the subject",
+    "placeholderMessage": "Tell us about your project..."
+  },
+  "booking": {
+    "title": "Book Your Consultation",
+    "description": "Choose between an in-person consultation or an online meeting that works best for you",
+    "inPerson": "In-Person Consultation",
+    "inPersonDesc": "Meet with our experts face-to-face at our office for a comprehensive project discussion.",
+    "onlineMeeting": "Online Meeting",
+    "onlineMeetingDesc": "Connect with our experts virtually from anywhere via video call for your convenience.",
+    "hoverText": "Hover or tap to see details",
+    "requestBooking": "Request Booking",
+    "bookConsultation": "Book Consultation",
+    "booking": "Booking...",
+    "bookingConfirmed": "Booking Confirmed!",
+    "bookingConfirmedDesc": "We'll contact you within 24 hours to confirm your consultation.",
+    "fullName": "Full Name",
+    "emailAddress": "Email Address",
+    "phoneNumber": "Phone Number",
+    "additionalDetails": "Additional Details",
+    "placeholderFullName": "Enter your full name",
+    "placeholderEmail": "Enter your email address",
+    "placeholderPhone": "Enter your phone number",
+    "placeholderMessage": "Tell us about your project or any specific requirements...",
+    "nameRequired": "Name is required",
+    "emailRequired": "Email is required",
+    "emailInvalid": "Please enter a valid email address",
+    "phoneRequired": "Phone number is required",
+    "phoneInvalid": "Please enter a valid phone number",
+    "inPersonFeatures": ["Personal interaction", "Physical samples & materials", "Office visit experience"],
+    "onlineFeatures": ["Virtual consultation", "Screen sharing capability", "No travel required"],
+    "inPersonBenefits": [
+      { "text": "Free Consultation" },
+      { "text": "Quick Response" },
+      { "text": "Professional Assessment" },
+      { "text": "Flexible Meeting" }
+    ],
+    "onlineBenefits": [
+      { "text": "Virtual Consultation" },
+      { "text": "Flexible Scheduling" },
+      { "text": "Screen Sharing" },
+      { "text": "Instant Connection" }
+    ],
+    "selectDate": "Select Date",
+    "selectTime": "Select Time",
+    "availableSlots": "Available Time Slots",
+    "morning": "Morning",
+    "afternoon": "Afternoon",
+    "evening": "Evening",
+    "dateRequired": "Please select a date",
+    "timeRequired": "Please select a time slot",
+    "timeSlots": {
+      "morning": ["9:00 AM", "10:00 AM", "11:00 AM"],
+      "afternoon": ["1:00 PM", "2:00 PM", "3:00 PM", "4:00 PM"],
+      "evening": ["5:00 PM", "6:00 PM"]
+    }
+  },
+  "footer": {
+    "slogan": "Bringing your vision to life.",
+    "quickLinks": "Quick Links",
+    "getInTouch": "Get In Touch",
+    "copyright": "© 2025 Darkom Construction & Consulting. All rights reserved."
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success"
+  }
+}
