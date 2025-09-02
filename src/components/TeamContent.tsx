@@ -178,7 +178,7 @@ const TeamContent = () => {
                   
                   {/* Expertise Tags */}
                   <div className="flex flex-wrap gap-2">
-                    {member.expertise.map((skill, skillIndex) => (
+                    {member.expertise.map((skill: any, skillIndex: number) => (
                       <span
                         key={skillIndex}
                         className="px-3 py-1 bg-gold/20 text-gold text-sm rounded-full border border-gold/30"
