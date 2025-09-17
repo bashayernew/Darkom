@@ -27,60 +27,18 @@ const TeamContent = () => {
 
   const teamMembers = [
     {
-      name: t('about.teamMembers.ahmed.name'),
-      position: t('about.teamMembers.ahmed.position'),
-      image: '/images/team1.jpg',
-      description: t('about.teamMembers.ahmed.description'),
-      expertise: t('about.teamMembers.ahmed.expertise'),
-      fullBio: t('about.teamMembers.ahmed.fullBio'),
+      name: t('about.teamMembers.marcel.name'),
+      position: t('about.teamMembers.marcel.position'),
+      image: '/images/marcel-el-jalkh.jpg',
+      description: t('about.teamMembers.marcel.description'),
+      expertise: t('about.teamMembers.marcel.expertise'),
+      fullBio: t('about.teamMembers.marcel.fullBio'),
       contact: {
         phone: '+965 5044 3637',
-        email: 'ahmed@darkom.com',
+        email: 'marcel@imagsketch.com',
         location: 'Kuwait City, Kuwait'
       },
-      achievements: t('about.teamMembers.ahmed.achievements')
-    },
-    {
-      name: t('about.teamMembers.sarah.name'),
-      position: t('about.teamMembers.sarah.position'),
-      image: '/images/team2.jpg',
-      description: t('about.teamMembers.sarah.description'),
-      expertise: t('about.teamMembers.sarah.expertise'),
-      fullBio: t('about.teamMembers.sarah.fullBio'),
-      contact: {
-        phone: '+965 5044 3638',
-        email: 'sarah@darkom.com',
-        location: 'Kuwait City, Kuwait'
-      },
-      achievements: t('about.teamMembers.sarah.achievements')
-    },
-    {
-      name: t('about.teamMembers.mohammed.name'),
-      position: t('about.teamMembers.mohammed.position'),
-      image: '/images/team3.jpg',
-      description: t('about.teamMembers.mohammed.description'),
-      expertise: t('about.teamMembers.mohammed.expertise'),
-      fullBio: t('about.teamMembers.mohammed.fullBio'),
-      contact: {
-        phone: '+965 5044 3639',
-        email: 'mohammed@darkom.com',
-        location: 'Kuwait City, Kuwait'
-      },
-      achievements: t('about.teamMembers.mohammed.achievements')
-    },
-    {
-      name: t('about.teamMembers.fatima.name'),
-      position: t('about.teamMembers.fatima.position'),
-      image: '/images/team4.jpg',
-      description: t('about.teamMembers.fatima.description'),
-      expertise: t('about.teamMembers.fatima.expertise'),
-      fullBio: t('about.teamMembers.fatima.fullBio'),
-      contact: {
-        phone: '+965 5044 3640',
-        email: 'fatima@darkom.com',
-        location: 'Kuwait City, Kuwait'
-      },
-      achievements: t('about.teamMembers.fatima.achievements')
+      achievements: t('about.teamMembers.marcel.achievements')
     }
   ]
 
@@ -133,7 +91,8 @@ const TeamContent = () => {
       {/* Team Members Grid */}
       <section className="py-20 bg-dark">
         <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-12">
+          <div className="flex justify-center">
+            <div className="max-w-md w-full">
             {teamMembers.map((member, index) => (
               <motion.div
                 key={index}
@@ -195,6 +154,7 @@ const TeamContent = () => {
                 </div>
               </motion.div>
             ))}
+            </div>
           </div>
         </div>
       </section>

@@ -226,56 +226,19 @@
     "readyToStartDesc2": "Let our expert team bring your vision to life with the same level of excellence and attention to detail",
 
     "teamMembers": {
-      "ahmed": {
-        "name": "Ahmed Al-Rashid",
-        "position": "Founder & CEO",
-        "description": "Visionary leader with over 15 years of experience in luxury construction and design.",
-        "expertise": ["Strategic Planning", "Project Management", "Client Relations"],
-        "fullBio": "Ahmed Al-Rashid is the visionary founder and CEO of Darkom Construction & Consulting. With over 15 years of experience in the luxury construction industry, Ahmed has led the company from its humble beginnings to becoming one of Kuwait's most respected design and construction firms. His expertise spans from strategic planning and project management to client relations and business development. Ahmed's passion for excellence and commitment to innovation has been the driving force behind the company's success.",
+      "marcel": {
+        "name": "Marcel Y. El Jalkh",
+        "position": "CEO & Founder",
+        "description": "Interior Designer, Expert in High-End Residential & Commercial Interiors, Furniture & Project Execution Specialist with over 35 years of international experience.",
+        "expertise": ["Interior Design", "Furniture Manufacturing", "Project Execution", "Luxury Villas", "Commercial Spaces", "Restoration"],
+        "fullBio": "Marcel Y. El Jalkh developed his passion for furniture under the guidance of his late father, Youssef M. El Jalkh, through his company Chez-Soi. He earned his Diploma in Interior Design from USEK University in Jounieh, Lebanon in 1989. After completing his studies, he relocated to Canada to refine his skills and expand his expertise, working with Camille Mouillot Company. Upon returning to Lebanon in 1994, he founded ImagSketch, a boutique firm specializing in interior design, furniture manufacturing, and restoration. Following his success in Kuwait with Al-Deera Contracting Company, Marcel continues his private practice to this day, delivering projects across Lebanon, Canada, Kuwait, Belgium, France, Morocco, Egypt, and Germany.",
         "achievements": [
-          "Led 50+ luxury residential projects",
-          "Established partnerships with top-tier suppliers",
-          "Received multiple industry awards for excellence",
-          "Mentored 20+ young professionals"
-        ]
-      },
-      "sarah": {
-        "name": "Sarah Al-Mansouri",
-        "position": "Lead Architect",
-        "description": "Award-winning architect specializing in modern luxury residential and commercial projects.",
-        "expertise": ["Architectural Design", "3D Modeling", "Sustainable Design"],
-        "fullBio": "Sarah Al-Mansouri is our award-winning Lead Architect, bringing over 12 years of experience in creating stunning architectural designs. Sarah specializes in modern luxury residential and commercial projects, with a particular focus on sustainable design principles. Her innovative approach combines contemporary aesthetics with functional excellence, ensuring every project not only looks spectacular but also serves its purpose perfectly. Sarah's designs have been featured in several architectural publications and have won multiple design awards.",
-        "achievements": [
-          "Designed 30+ award-winning projects",
-          "Specialized in sustainable architecture",
-          "Published in Architectural Digest",
-          "Speaker at regional design conferences"
-        ]
-      },
-      "mohammed": {
-        "name": "Mohammed Al-Zahra",
-        "position": "Interior Design Director",
-        "description": "Creative designer with a passion for creating stunning, functional living spaces.",
-        "expertise": ["Interior Design", "Space Planning", "Material Selection"],
-        "fullBio": "Mohammed Al-Zahra serves as our Interior Design Director, bringing creativity and innovation to every space he touches. With 10+ years of experience in interior design, Mohammed has a unique ability to transform ordinary spaces into extraordinary environments. His expertise in space planning, material selection, and color theory ensures that every interior not only looks beautiful but also functions perfectly for the people who live and work there. Mohammed's designs reflect a perfect balance of luxury, comfort, and functionality.",
-        "achievements": [
-          "Completed 40+ interior design projects",
-          "Expert in luxury residential interiors",
-          "Certified in sustainable materials",
-          "Featured in Interior Design Magazine"
-        ]
-      },
-      "fatima": {
-        "name": "Fatima Al-Khalil",
-        "position": "Project Manager",
-        "description": "Experienced project manager ensuring timely delivery and quality control.",
-        "expertise": ["Project Coordination", "Timeline Management", "Quality Assurance"],
-        "fullBio": "Fatima Al-Khalil is our dedicated Project Manager, ensuring that every project is delivered on time, within budget, and to the highest quality standards. With 8+ years of experience in construction project management, Fatima excels at coordinating complex projects, managing timelines, and maintaining quality control throughout the construction process. Her attention to detail and strong communication skills make her an invaluable team member who ensures client satisfaction at every stage of the project.",
-        "achievements": [
-          "Managed 25+ construction projects",
-          "100% on-time delivery rate",
-          "Certified Project Management Professional",
-          "Reduced project costs by 15% average"
+          "35+ years of international experience",
+          "Founded ImagSketch in 1994",
+          "Co-founded Al-Deera Contracting Company in Kuwait",
+          "Delivered projects across 8 countries",
+          "Diploma in Interior Design from USEK University",
+          "Expert in luxury residential and commercial projects"
         ]
       }
     }
