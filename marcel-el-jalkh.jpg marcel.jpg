@@ -1,0 +1,5 @@
+[33m0f07182[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m Update team page with Marcel Y. El Jalkh as CEO - Replace all team members with Marcel's profile and information - Add Marcel's image and complete bio in both English and Arabic - Update team layout to single centered card for CEO profile
+[33m3038e0f[m Fix final TypeScript error in TeamContent - Added type annotation for skill parameter - Build now passes completely - Ready for production deployment
+[33m4da4937[m Fix TypeScript build errors - Fixed missing key props in BookingCards - Fixed type issues with translation arrays - Updated LanguageContext to return any type - Build now passes successfully
+[33mb26f865[m Complete bilingual implementation with custom LanguageContext - removed next-intl dependency - added calendar and time slots to booking system - translated all remaining text content - fixed build errors
+[33mca5d37e[m Added all project files and updates (merged Book into Contact, removed legends, improved footer, bilingual support)

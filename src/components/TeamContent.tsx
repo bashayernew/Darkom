@@ -29,7 +29,7 @@ const TeamContent = () => {
     {
       name: t('about.teamMembers.marcel.name'),
       position: t('about.teamMembers.marcel.position'),
-      image: '/images/marcel-el-jalkh.jpg',
+      image: '/images/marcel-profile-new.jpg',
       description: t('about.teamMembers.marcel.description'),
       expertise: t('about.teamMembers.marcel.expertise'),
       fullBio: t('about.teamMembers.marcel.fullBio'),
@@ -39,6 +39,20 @@ const TeamContent = () => {
         location: 'Kuwait City, Kuwait'
       },
       achievements: t('about.teamMembers.marcel.achievements')
+    },
+    {
+      name: t('about.teamMembers.moazam.name'),
+      position: t('about.teamMembers.moazam.position'),
+      image: '/images/moazam-ikram.jpg',
+      description: t('about.teamMembers.moazam.description'),
+      expertise: t('about.teamMembers.moazam.expertise'),
+      fullBio: t('about.teamMembers.moazam.fullBio'),
+      contact: {
+        phone: '+96878123168',
+        email: 'moazamikram35@gmail.com',
+        location: 'Gulf Region'
+      },
+      achievements: t('about.teamMembers.moazam.achievements')
     }
   ]
 
@@ -91,8 +105,7 @@ const TeamContent = () => {
       {/* Team Members Grid */}
       <section className="py-20 bg-dark">
         <div className="container mx-auto px-4">
-          <div className="flex justify-center">
-            <div className="max-w-md w-full">
+          <div className="grid md:grid-cols-2 gap-12 max-w-4xl mx-auto">
             {teamMembers.map((member, index) => (
               <motion.div
                 key={index}
@@ -154,7 +167,6 @@ const TeamContent = () => {
                 </div>
               </motion.div>
             ))}
-            </div>
           </div>
         </div>
       </section>
