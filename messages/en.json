@@ -226,32 +226,17 @@
     "readyToStartDesc2": "Let our expert team bring your vision to life with the same level of excellence and attention to detail",
 
     "teamMembers": {
-      "marcel": {
-        "name": "Marcel Y. El Jalkh",
-        "position": "CEO & Founder",
-        "description": "Interior Designer, Expert in High-End Residential & Commercial Interiors, Furniture & Project Execution Specialist with over 35 years of international experience.",
-        "expertise": ["Interior Design", "Furniture Manufacturing", "Project Execution", "Luxury Villas", "Commercial Spaces", "Restoration"],
-        "fullBio": "Marcel Y. El Jalkh developed his passion for furniture under the guidance of his late father, Youssef M. El Jalkh, through his company Chez-Soi. He earned his Diploma in Interior Design from USEK University in Jounieh, Lebanon in 1989. After completing his studies, he relocated to Canada to refine his skills and expand his expertise, working with Camille Mouillot Company. Upon returning to Lebanon in 1994, he founded ImagSketch, a boutique firm specializing in interior design, furniture manufacturing, and restoration. Following his success in Kuwait with Al-Deera Contracting Company, Marcel continues his private practice to this day, delivering projects across Lebanon, Canada, Kuwait, Belgium, France, Morocco, Egypt, and Germany.",
+      "huthaifa": {
+        "name": "Huthaifa Al-Tai",
+        "position": "Senior Interior / Exterior Designer",
+        "description": "Creative, detail-oriented designer with 6+ years across commercial and residential projects. Proficient in 3Ds Max, Corona, V-Ray, AutoCAD, and Photoshop.",
+        "expertise": ["Interior Design", "Exterior Design", "Space Planning", "3D Visualization", "Lighting & Materials", "Client Presentation"],
+        "fullBio": "Huthaifa Al-Tai is a senior interior/exterior designer based in Kuwait with over 6 years of experience delivering visually compelling and functional spaces. He has led end-to-end design projects for commercial and residential spaces, including multiple Co-ops such as Khaldiya, Abu Al-Hasaniya, Fintas, and Adailiya. He has developed custom 3D models for furniture and interior elements and contributed to full-scale interior planning projects for furniture showrooms. Certified in Autodesk tools with formal training in 3D design, Huthaifa blends strong visualization skills with practical execution and client communication.",
         "achievements": [
-          "35+ years of international experience",
-          "Founded ImagSketch in 1994",
-          "Co-founded Al-Deera Contracting Company in Kuwait",
-          "Delivered projects across 8 countries",
-          "Diploma in Interior Design from USEK University",
-          "Expert in luxury residential and commercial projects"
-        ]
-      },
-      "moazam": {
-        "name": "Moazam Ikram",
-        "position": "Interior Designer",
-        "description": "Skilled interior designer with over 5 years of experience in residential and commercial projects across the Gulf region.",
-        "expertise": ["Interior Design", "Space Planning & 3D Visualization", "Project Execution", "Client Relations"],
-        "fullBio": "Moazam Ikram is a skilled interior designer with over 5 years of experience in residential and commercial projects across the Gulf region. Known for a keen eye for detail and a creative approach to space planning, Moazam Ikram transforms ideas into stunning, functional environments. From initial concept to 3D visualization and final execution, Moazam Ikram ensures every project is delivered with precision, innovation, and client satisfaction at the forefront. With strong client-handling skills and a dedication to excellence, Moazam Ikram has built a reputation for turning visions into reality.",
-        "achievements": [
-          "Designed and executed 30+ luxury residential and commercial interiors across the Gulf",
-          "Delivered projects with 100% on-time completion record",
-          "Recognized for innovative use of space in high-end interiors",
-          "Built long-term client relationships through personalized service"
+          "Led full design cycles for commercial and residential spaces",
+          "Delivered concepts and execution for multiple Co-ops in Kuwait",
+          "Developed custom furniture and interior 3D models",
+          "LOYAC Star Award and TV Presenter Training"
         ]
       }
     }

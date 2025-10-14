@@ -27,32 +27,18 @@ const TeamContent = () => {
 
   const teamMembers = [
     {
-      name: t('about.teamMembers.marcel.name'),
-      position: t('about.teamMembers.marcel.position'),
-      image: '/images/marcel-profile-new.jpg',
-      description: t('about.teamMembers.marcel.description'),
-      expertise: t('about.teamMembers.marcel.expertise'),
-      fullBio: t('about.teamMembers.marcel.fullBio'),
+      name: t('about.teamMembers.huthaifa.name'),
+      position: t('about.teamMembers.huthaifa.position'),
+      image: '/images/WhatsApp Image 2025-09-17 at 12.04.21_d2976471.jpg',
+      description: t('about.teamMembers.huthaifa.description'),
+      expertise: t('about.teamMembers.huthaifa.expertise'),
+      fullBio: t('about.teamMembers.huthaifa.fullBio'),
       contact: {
-        phone: '+965 5044 3637',
-        email: 'marcel@imagsketch.com',
-        location: 'Kuwait City, Kuwait'
+        phone: '+965 55770243',
+        email: 'Huthaifa3d@hotmail.com',
+        location: 'Kuwait'
       },
-      achievements: t('about.teamMembers.marcel.achievements')
-    },
-    {
-      name: t('about.teamMembers.moazam.name'),
-      position: t('about.teamMembers.moazam.position'),
-      image: '/images/moazam-ikram.jpg',
-      description: t('about.teamMembers.moazam.description'),
-      expertise: t('about.teamMembers.moazam.expertise'),
-      fullBio: t('about.teamMembers.moazam.fullBio'),
-      contact: {
-        phone: '+96878123168',
-        email: 'moazamikram35@gmail.com',
-        location: 'Gulf Region'
-      },
-      achievements: t('about.teamMembers.moazam.achievements')
+      achievements: t('about.teamMembers.huthaifa.achievements')
     }
   ]
 
@@ -105,7 +91,7 @@ const TeamContent = () => {
       {/* Team Members Grid */}
       <section className="py-20 bg-dark">
         <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-2 gap-12 max-w-4xl mx-auto">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-12 max-w-6xl mx-auto">
             {teamMembers.map((member, index) => (
               <motion.div
                 key={index}
