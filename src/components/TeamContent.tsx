@@ -39,6 +39,20 @@ const TeamContent = () => {
         location: 'Kuwait'
       },
       achievements: t('about.teamMembers.huthaifa.achievements')
+    },
+    {
+      name: t('about.teamMembers.moazam.name'),
+      position: t('about.teamMembers.moazam.position'),
+      image: '/images/WhatsApp Image 2025-09-17 at 11.58.57_ed422966.jpg',
+      description: t('about.teamMembers.moazam.description'),
+      expertise: t('about.teamMembers.moazam.expertise'),
+      fullBio: t('about.teamMembers.moazam.fullBio'),
+      contact: {
+        phone: '+96878123168',
+        email: 'moazamikram35@gmail.com',
+        location: 'Gulf Region'
+      },
+      achievements: t('about.teamMembers.moazam.achievements')
     }
   ]
 

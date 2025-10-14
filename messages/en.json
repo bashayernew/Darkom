@@ -226,6 +226,19 @@
     "readyToStartDesc2": "Let our expert team bring your vision to life with the same level of excellence and attention to detail",
 
     "teamMembers": {
+      "moazam": {
+        "name": "Moazam Ikram",
+        "position": "Interior Designer",
+        "description": "Skilled interior designer with over 5 years of experience in residential and commercial projects across the Gulf region.",
+        "expertise": ["Interior Design", "Space Planning & 3D Visualization", "Project Execution", "Client Relations"],
+        "fullBio": "Moazam Ikram is a skilled interior designer with over 5 years of experience in residential and commercial projects across the Gulf region. Known for a keen eye for detail and a creative approach to space planning, Moazam Ikram transforms ideas into stunning, functional environments. From initial concept to 3D visualization and final execution, Moazam Ikram ensures every project is delivered with precision, innovation, and client satisfaction at the forefront. With strong client-handling skills and a dedication to excellence, Moazam Ikram has built a reputation for turning visions into reality.",
+        "achievements": [
+          "Designed and executed 30+ luxury residential and commercial interiors across the Gulf",
+          "Delivered projects with 100% on-time completion record",
+          "Recognized for innovative use of space in high-end interiors",
+          "Built long-term client relationships through personalized service"
+        ]
+      },
       "huthaifa": {
         "name": "Huthaifa Al-Tai",
         "position": "Senior Interior / Exterior Designer",
