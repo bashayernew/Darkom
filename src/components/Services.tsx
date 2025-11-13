@@ -2,8 +2,9 @@
 
 import { motion } from 'framer-motion'
 import Link from 'next/link'
+import Image from 'next/image'
 import { useState } from 'react'
-import { Building2, Palette, Hammer, Sparkles, ArrowRight } from 'lucide-react'
+import { Building2, Hammer, Sparkles, ArrowRight } from 'lucide-react'
 import { useLanguage } from '@/contexts/LanguageContext'
 
 const Services = () => {
@@ -14,13 +15,29 @@ const Services = () => {
     {
       title: t('services.architecture.title'),
       description: t('services.architecture.description'),
-      icon: <Building2 className="w-8 h-8 text-gold" />,
+      icon: (
+        <Image
+          src="/images/project.png"
+          alt={t('services.architecture.title')}
+          width={48}
+          height={48}
+          className="w-12 h-12 object-contain"
+        />
+      ),
       features: ['Concept Development', '3D Modeling', 'Sustainable Design', 'Project Planning']
     },
     {
       title: t('services.interior.title'),
       description: t('services.interior.description'),
-      icon: <Palette className="w-8 h-8 text-gold" />,
+      icon: (
+        <Image
+          src="/images/staircase.png"
+          alt={t('services.interior.title')}
+          width={48}
+          height={48}
+          className="w-12 h-12 object-contain"
+        />
+      ),
       features: [
         t('services.interiorFeatures.spacePlanning'),
         t('services.interiorFeatures.colorSchemes'),
@@ -31,7 +48,15 @@ const Services = () => {
     {
       title: t('services.construction.title'),
       description: t('services.construction.description'),
-      icon: <Hammer className="w-8 h-8 text-gold" />,
+      icon: (
+        <Image
+          src="/images/construction.png"
+          alt={t('services.construction.title')}
+          width={48}
+          height={48}
+          className="w-12 h-12 object-contain"
+        />
+      ),
       features: [
         t('services.constructionFeatures.qualityMaterials'),
         t('services.constructionFeatures.expertCraftsmanship'),
@@ -42,7 +67,15 @@ const Services = () => {
     {
       title: t('services.consulting.title'),
       description: t('services.consulting.description'),
-      icon: <Sparkles className="w-8 h-8 text-gold" />,
+      icon: (
+        <Image
+          src="/images/consultation.png"
+          alt={t('services.consulting.title')}
+          width={48}
+          height={48}
+          className="w-12 h-12 object-contain"
+        />
+      ),
       features: [
         t('services.consultingFeatures.projectAssessment'),
         t('services.consultingFeatures.costAnalysis'),

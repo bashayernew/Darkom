@@ -51,7 +51,7 @@ const IntroGallery = () => {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
               viewport={{ once: true }}
-              className="relative"
+              className="relative w-full max-w-lg lg:max-w-md mx-auto"
             >
               <div className="relative overflow-hidden rounded-2xl aspect-[4/3]">
                 <Image
@@ -70,7 +70,7 @@ const IntroGallery = () => {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.3 }}
               viewport={{ once: true }}
-              className="space-y-6 flex flex-col justify-center"
+              className="space-y-6 flex flex-col justify-center w-full max-w-xl mx-auto"
             >
               <h3 className="heading-md text-gold text-center lg:text-left">
                 {t('intro.whyChoose')}
@@ -97,7 +97,7 @@ const IntroGallery = () => {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
               viewport={{ once: true }}
-              className="space-y-6 flex flex-col justify-center"
+              className="space-y-6 flex flex-col justify-center w-full max-w-xl mx-auto"
             >
               <h3 className="heading-md text-gold text-center lg:text-left">
                 {t('intro.ourPromise')}
@@ -121,7 +121,7 @@ const IntroGallery = () => {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.5 }}
               viewport={{ once: true }}
-              className="relative"
+              className="relative w-full max-w-lg lg:max-w-md mx-auto"
             >
               <div className="relative overflow-hidden rounded-2xl aspect-[4/3]">
                 <Image

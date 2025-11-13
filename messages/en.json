@@ -33,13 +33,13 @@
     "hoverText": "Hover or tap to see details",
     "architecture": {
       "title": "Architecture & Design",
-      "description": "Innovative architectural solutions that blend creativity with functionality.",
-      "features": ["Concept Development", "3D Modeling", "Sustainable Design", "Project Planning"]
+      "description": "Design: Interior and exterior, facades and gardens. We prepare engineering and architectural drawings according to specifications. We provide designs according to specifications using modern software to ensure accuracy and quality.",
+      "features": ["Interior & Exterior Design", "Facade Design", "Garden Design", "Engineering Drawings", "Architectural Plans", "Modern Software Design", "Specification-Based Design"]
     },
     "interior": {
       "title": "Interior Design",
-      "description": "Transform spaces with elegant interior solutions that reflect your style.",
-      "features": ["Space Planning", "Color Schemes", "Furniture Selection", "Lighting Design"]
+      "description": "Transform spaces with elegant interior solutions that reflect your style. We provide interior and exterior finishing services with attention to every detail.",
+      "features": ["Space Planning", "Color Schemes", "Furniture Selection", "Lighting Design", "Interior Finishing", "Exterior Finishing"]
     },
     "interiorFeatures": {
       "spacePlanning": "Space Planning",
@@ -49,8 +49,8 @@
     },
     "construction": {
       "title": "Construction",
-      "description": "Expert construction services with attention to every detail.",
-      "features": ["Quality Materials", "Expert Craftsmanship", "Timeline Management", "Safety Standards"]
+      "description": "We execute projects according to specifications and drawings. We supervise all stages of construction and finishing. We implement contracting projects with commitment to safety and quality standards.",
+      "features": ["Project Execution", "Specification Compliance", "Construction Supervision", "Finishing Supervision", "Contracting Projects", "Safety Standards", "Quality Assurance"]
     },
     "constructionFeatures": {
       "qualityMaterials": "Quality Materials",
@@ -60,8 +60,8 @@
     },
     "consulting": {
       "title": "Consulting",
-      "description": "Professional guidance for your construction and design projects.",
-      "features": ["Project Assessment", "Cost Analysis", "Regulatory Compliance", "Risk Management"]
+      "description": "We provide engineering consultations and post-implementation services. Professional guidance for your construction and design projects.",
+      "features": ["Engineering Consultations", "Post-Implementation Services", "Project Assessment", "Cost Analysis", "Regulatory Compliance", "Risk Management"]
     },
     "consultingFeatures": {
       "projectAssessment": "Project Assessment",
@@ -71,23 +71,28 @@
     },
     "facade": {
       "title": "Facade & Exterior",
-      "description": "Stunning exterior designs that make lasting impressions.",
-      "features": ["Facade Design", "Material Selection", "Structural Engineering", "Installation"]
+      "description": "Stunning exterior designs that make lasting impressions. We design facades and exteriors with architectural supervision and commitment to quality standards.",
+      "features": ["Facade Design", "Material Selection", "Structural Engineering", "Installation", "Architectural Supervision", "Quality Standards"]
     },
     "landscaping": {
       "title": "Landscaping",
-      "description": "Beautiful outdoor spaces that complement your architecture.",
+      "description": "Beautiful outdoor spaces that complement your architecture. Garden design and landscaping services.",
       "features": ["Garden Design", "Hardscaping", "Plant Selection", "Maintenance Plans"]
     },
     "modeling3d": {
       "title": "3D Modeling",
-      "description": "Realistic 3D visualizations of your project before construction.",
-      "features": ["3D Rendering", "Virtual Tours", "Animation", "VR Experience"]
+      "description": "Realistic 3D visualizations of your project before construction. Using modern software to ensure accuracy and quality.",
+      "features": ["3D Rendering", "Virtual Tours", "Animation", "VR Experience", "Modern Software", "Accurate Visualization"]
     },
     "renovation": {
       "title": "Renovation",
-      "description": "Modern updates and renovations for existing spaces.",
-      "features": ["Space Planning", "Material Updates", "Structural Modifications", "Interior Refresh"]
+      "description": "Maintenance and restoration of buildings and facilities. Modern updates and renovations for existing spaces.",
+      "features": ["Building Maintenance", "Facility Restoration", "Space Planning", "Material Updates", "Structural Modifications", "Interior Refresh"]
+    },
+    "materials": {
+      "title": "Building Materials",
+      "description": "We supply building materials including marble, insulation, stone, wood, ceramic, adhesive from Saudi Arabia, and door supply. We cooperate with the best suppliers inside and outside Kuwait, committed to safety and quality standards in material selection.",
+      "features": ["Marble Supply", "Insulation Materials", "Stone Supply", "Wood Supply", "Ceramic Tiles", "Adhesive from Saudi Arabia", "Door Supply", "Quality Material Selection", "Supplier Network"]
     },
     "hoverText": "Hover or tap to see details",
     "learnMore": "Learn More",
@@ -250,6 +255,33 @@
           "Delivered concepts and execution for multiple Co-ops in Kuwait",
           "Developed custom furniture and interior 3D models",
           "LOYAC Star Award and TV Presenter Training"
+        ]
+      },
+      "abdulrazak": {
+        "name": "Abdulrazak Ahmed",
+        "position": "Sales Manager",
+        "description": "Experienced Sales Manager with extensive expertise in sales since 2016, specializing in client relations, business development, and cultural diplomacy.",
+        "expertise": ["Sales Management", "Business Development", "Client Relations", "Human Development", "Training & Development", "Cultural Diplomacy"],
+        "fullBio": "Abdulrazak Ahmed is a Sales Manager with extensive experience in the sales field since 2016. He has completed human development courses and specialized training courses in sales. He has received international evaluation from seven Arab countries and served as a speaker for the Egyptian Consulate in cultural seminars from 2017 to 2019. His expertise combines strategic sales management with cultural diplomacy and professional development, bringing a unique perspective to client relations and business growth.",
+        "achievements": [
+          "Over 8 years of experience in sales (since 2016)",
+          "Completed human development courses",
+          "Completed specialized training courses in sales",
+          "Received international evaluation from seven Arab countries",
+          "Served as speaker for the Egyptian Consulate in cultural seminars (2017-2019)"
+        ]
+      },
+      "yousif": {
+        "name": "Yousif",
+        "position": "Cleaning Site Supervisor",
+        "description": "Dedicated Cleaning Site Supervisor ensuring high standards of cleanliness and maintenance across all project sites.",
+        "expertise": ["Site Supervision", "Quality Control", "Team Management", "Maintenance Planning", "Safety Standards", "Operations Management"],
+        "fullBio": "Yousif is a Cleaning Site Supervisor responsible for overseeing cleaning operations and maintaining high standards of cleanliness and hygiene across project sites. With a focus on quality control, team coordination, and efficient operations management, Yousif ensures that all sites meet the highest standards of cleanliness and maintenance. His attention to detail and commitment to excellence contribute to creating safe, clean, and well-maintained environments for clients and team members.",
+        "achievements": [
+          "Maintains high standards of cleanliness across all project sites",
+          "Effectively manages cleaning teams and operations",
+          "Ensures compliance with safety and hygiene standards",
+          "Coordinates maintenance schedules and quality control"
         ]
       }
     }

@@ -3,30 +3,64 @@
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 import Link from 'next/link'
+import { Gem, ShieldCheck, Leaf } from 'lucide-react'
+import type { ReactNode } from 'react'
 import { useLanguage } from '@/contexts/LanguageContext'
 
 const AboutContent = () => {
   const { t } = useLanguage()
-  const values = [
+  const values: { title: string; description: string; icon: ReactNode }[] = [
     {
       title: t('about.excellenceValue.title'),
       description: t('about.excellenceValue.description'),
-      icon: '✨'
+      icon: (
+        <Image
+          src="/images/operation.png"
+          alt={t('about.excellenceValue.title')}
+          width={48}
+          height={48}
+          className="w-12 h-12 object-contain"
+        />
+      )
     },
     {
       title: t('about.innovationValue.title'),
       description: t('about.innovationValue.description'),
-      icon: '🚀'
+      icon: (
+        <Image
+          src="/images/innovation.png"
+          alt={t('about.innovationValue.title')}
+          width={48}
+          height={48}
+          className="w-12 h-12 object-contain"
+        />
+      )
     },
     {
       title: t('about.integrityValue.title'),
       description: t('about.integrityValue.description'),
-      icon: '🤝'
+      icon: (
+        <Image
+          src="/images/honesty.png"
+          alt={t('about.integrityValue.title')}
+          width={48}
+          height={48}
+          className="w-12 h-12 object-contain"
+        />
+      )
     },
     {
       title: t('about.sustainabilityValue.title'),
       description: t('about.sustainabilityValue.description'),
-      icon: '🌱'
+      icon: (
+        <Image
+          src="/images/planet-earth.png"
+          alt={t('about.sustainabilityValue.title')}
+          width={48}
+          height={48}
+          className="w-12 h-12 object-contain"
+        />
+      )
     }
   ]
 
@@ -58,50 +92,38 @@ const AboutContent = () => {
       <section className="py-16 bg-dark">
         <div className="container mx-auto px-4">
           <div className="max-w-7xl mx-auto">
-            {/* Story with Integrated Team Image */}
+            {/* Story Section */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className="grid lg:grid-cols-2 gap-12 items-center mb-20"
+              className="mb-20"
             >
-              {/* Left: Story Content */}
-              <div className="space-y-6 flex flex-col justify-center">
-                <h2 className="heading-lg text-gold text-center lg:text-left">
-                  {t('about.ourStory')}
-                </h2>
-                <div className="space-y-4 text-cream/90 leading-relaxed text-lg text-center lg:text-left">
-                  <p>
-                    {t('about.storyText1')}
-                  </p>
-                  <p>
-                    {t('about.storyText2')}
-                  </p>
-                  <p>
-                    {t('about.storyText3')}
-                  </p>
-                </div>
-              </div>
-
-              {/* Right: Team Image */}
-              <div className="relative">
-                <div className="relative overflow-hidden rounded-2xl aspect-[4/3]">
-                  <Image
-                    src="/images/team-construction-worker.jpg"
-                    alt="Professional construction worker reviewing blueprints"
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 1024px) 100vw, 50vw"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
-                  <div className="absolute bottom-4 left-4 right-4">
-                    <h3 className="text-gold font-semibold text-xl mb-2">
-                      Expert Team in Action
-                    </h3>
-                    <p className="text-cream/90 text-sm">
-                      Our professionals bring decades of combined experience
-                    </p>
+              <div className="relative max-w-4xl mx-auto">
+                <div className="absolute -top-5 left-6 h-10 w-10 rounded-full bg-gold/30 blur-xl opacity-60" />
+                <div className="absolute -top-6 right-6 h-16 w-16 rounded-full bg-gold/20 blur-2xl opacity-70" />
+                <div className="relative bg-dark-gray/90 border border-gold/20 rounded-3xl p-8 sm:p-10 shadow-[0_25px_45px_-30px_rgba(196,158,87,0.4)] backdrop-blur">
+                  <div className="flex flex-col gap-6 text-left">
+                    <div className="space-y-2">
+                      <span className="text-sm uppercase tracking-[0.3em] text-gold/70">
+                        {t('about.about')}
+                      </span>
+                      <h2 className="heading-lg text-gold">
+                        {t('about.ourStory')}
+                      </h2>
+                    </div>
+                    <div className="space-y-5 text-cream/90 leading-relaxed text-lg">
+                      <p className="border-l-4 border-gold/60 pl-5">
+                        {t('about.storyText1')}
+                      </p>
+                      <p>
+                        {t('about.storyText2')}
+                      </p>
+                      <p>
+                        {t('about.storyText3')}
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -113,43 +135,23 @@ const AboutContent = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
               viewport={{ once: true }}
-              className="grid lg:grid-cols-2 gap-12 items-center mb-20"
+              className="grid lg:grid-cols-[0.8fr_1fr] gap-12 items-center mb-20"
             >
-              {/* Left: Work Quality Images */}
-              <div className="space-y-4">
-                <div className="grid grid-cols-2 gap-4">
-                  <div className="relative overflow-hidden rounded-2xl aspect-[4/3]">
-                    <Image
-                      src="/images/luxury-garden-landscaping.jpg"
-                      alt="Beautiful luxury garden with water features and pergola"
-                      fill
-                      className="object-cover transition-transform duration-500 hover:scale-110"
-                      sizes="(max-width: 1024px) 50vw, 25vw"
-                    />
-                  </div>
-                  <div className="relative overflow-hidden rounded-2xl aspect-[4/3]">
-                    <Image
-                      src="/images/luxury-building-night.jpg"
-                      alt="Grand illuminated luxury building with reflective pool"
-                      fill
-                      className="object-cover transition-transform duration-500 hover:scale-110"
-                      sizes="(max-width: 1024px) 50vw, 25vw"
-                    />
-                  </div>
-                </div>
+              {/* Left: Work Quality Image */}
+              <div className="w-full max-w-md mx-auto lg:mx-0">
                 <div className="relative overflow-hidden rounded-2xl aspect-[4/3]">
                   <Image
-                    src="/images/traditional-living-room.jpg"
-                    alt="Lavish Middle Eastern living room with rich textures and chandelier"
+                    src="/images/luxury-garden-landscaping.jpg"
+                    alt="Beautiful luxury garden with water features and pergola"
                     fill
                     className="object-cover transition-transform duration-500 hover:scale-110"
-                    sizes="(max-width: 1024px) 100vw, 50vw"
+                    sizes="(max-width: 1024px) 100vw, 35vw"
                   />
                 </div>
               </div>
 
               {/* Right: Mission Content */}
-              <div className="space-y-6 flex flex-col justify-center">
+              <div className="space-y-6 flex flex-col justify-center w-full max-w-xl mx-auto lg:mx-0">
                 <h2 className="heading-lg text-gold text-center lg:text-left">
                   {t('about.ourMission')}
                 </h2>
@@ -176,11 +178,11 @@ const AboutContent = () => {
               className="grid lg:grid-cols-2 gap-12 items-center mb-20"
             >
               {/* Left: Team Collaboration Content */}
-              <div className="space-y-6 flex flex-col justify-center">
+              <div className="space-y-4 flex flex-col justify-center w-full max-w-xl mx-auto lg:mx-0">
                 <h2 className="heading-lg text-gold text-center lg:text-left">
                   {t('about.collaborativeExcellence')}
                 </h2>
-                <div className="space-y-4 text-cream/90 leading-relaxed text-lg text-center lg:text-left">
+                <div className="space-y-2 text-cream/90 leading-relaxed text-lg text-center lg:text-left">
                   <p>
                     {t('about.collaborativeText1')}
                   </p>
@@ -194,7 +196,7 @@ const AboutContent = () => {
               </div>
 
               {/* Right: Team Collaboration Image */}
-              <div className="relative">
+              <div className="relative w-full max-w-lg lg:max-w-md mx-auto lg:mx-0">
                 <div className="relative overflow-hidden rounded-2xl aspect-[4/3]">
                   <Image
                     src="/images/team-construction-site.jpg"
@@ -204,14 +206,6 @@ const AboutContent = () => {
                     sizes="(max-width: 1024px) 100vw, 50vw"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
-                  <div className="absolute bottom-4 left-4 right-4">
-                    <h3 className="text-gold font-semibold text-xl mb-2">
-                      Collaborative Excellence
-                    </h3>
-                    <p className="text-cream/90 text-sm">
-                      Working together to achieve extraordinary results
-                    </p>
-                  </div>
                 </div>
               </div>
             </motion.div>
@@ -225,9 +219,6 @@ const AboutContent = () => {
               className="grid md:grid-cols-3 gap-8 mb-20"
             >
               <div className="text-center p-6 bg-dark-gray rounded-2xl border border-gold/20">
-                <div className="w-16 h-16 bg-gold/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl">🏗️</span>
-                </div>
                 <h3 className="text-xl font-playfair font-semibold text-gold mb-3">
                   {t('about.over10Years')}
                 </h3>
@@ -236,9 +227,6 @@ const AboutContent = () => {
                 </p>
               </div>
               <div className="text-center p-6 bg-dark-gray rounded-2xl border border-gold/20">
-                <div className="w-16 h-16 bg-gold/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl">🏆</span>
-                </div>
                 <h3 className="text-xl font-playfair font-semibold text-gold mb-3">
                   {t('about.hundredProjects')}
                 </h3>
@@ -247,9 +235,6 @@ const AboutContent = () => {
                 </p>
               </div>
               <div className="text-center p-6 bg-dark-gray rounded-2xl border border-gold/20">
-                <div className="w-16 h-16 bg-gold/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl">⭐</span>
-                </div>
                 <h3 className="text-xl font-playfair font-semibold text-gold mb-3">
                   {t('about.excellence')}
                 </h3>
@@ -263,7 +248,7 @@ const AboutContent = () => {
       </section>
 
       {/* Our Values */}
-      <section className="py-16 bg-dark-gray">
+      <section className="pt-12 pb-16 bg-dark-gray">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -281,7 +266,8 @@ const AboutContent = () => {
           </motion.div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {values.map((value, index) => (
+            {values.map((value, index) => {
+              return (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 30 }}
@@ -290,7 +276,9 @@ const AboutContent = () => {
                 viewport={{ once: true }}
                 className="text-center p-6 bg-dark rounded-2xl border border-gold/20 hover:border-gold/40 transition-all duration-300"
               >
-                <div className="text-4xl mb-4">{value.icon}</div>
+                <div className="w-16 h-16 rounded-full border border-gold/30 bg-gold/10 flex items-center justify-center mx-auto mb-4">
+                  {value.icon}
+                </div>
                 <h3 className="text-xl font-playfair font-semibold text-gold mb-3">
                   {value.title}
                 </h3>
@@ -298,7 +286,7 @@ const AboutContent = () => {
                   {value.description}
                 </p>
               </motion.div>
-            ))}
+            )})}
           </div>
         </div>
       </section>

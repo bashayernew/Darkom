@@ -71,10 +71,10 @@ export default function Contact() {
                 {t('contact.emailUs')}
               </h3>
               <a 
-                href="mailto:info@darkom.com" 
+              href="mailto:hello@darkom.design" 
                 className="text-cream/80 hover:text-gold transition-colors duration-300"
               >
-                info@darkom.com
+              hello@darkom.design
               </a>
             </motion.div>
 

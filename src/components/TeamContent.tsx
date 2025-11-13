@@ -3,7 +3,8 @@
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import Image from 'next/image'
-import { X, Phone, Mail, MapPin } from 'lucide-react'
+import { X, Phone, Mail, MapPin, Building2, Sparkles, ShieldCheck, UserCircle2 } from 'lucide-react'
+import type { LucideIcon } from 'lucide-react'
 import { useLanguage } from '@/contexts/LanguageContext'
 
 type TeamMember = {
@@ -19,6 +20,7 @@ type TeamMember = {
     location: string
   }
   achievements: string[]
+  fallbackIcon?: LucideIcon
 }
 
 const TeamContent = () => {
@@ -35,7 +37,7 @@ const TeamContent = () => {
       fullBio: t('about.teamMembers.huthaifa.fullBio'),
       contact: {
         phone: '+965 55770243',
-        email: 'Huthaifa3d@hotmail.com',
+        email: 'huthaifaaltai@darkom.design',
         location: 'Kuwait'
       },
       achievements: t('about.teamMembers.huthaifa.achievements')
@@ -49,10 +51,76 @@ const TeamContent = () => {
       fullBio: t('about.teamMembers.moazam.fullBio'),
       contact: {
         phone: '+96878123168',
-        email: 'moazamikram35@gmail.com',
+        email: 'moazam.ikram@design.design',
         location: 'Gulf Region'
       },
       achievements: t('about.teamMembers.moazam.achievements')
+    },
+    {
+      name: t('about.teamMembers.abdulrazak.name'),
+      position: t('about.teamMembers.abdulrazak.position'),
+      image: '/images/abdulrazakpic.jpg',
+      description: t('about.teamMembers.abdulrazak.description'),
+      expertise: t('about.teamMembers.abdulrazak.expertise'),
+      fullBio: t('about.teamMembers.abdulrazak.fullBio'),
+      contact: {
+        phone: '+965 0000 0000',
+        email: 'abdulrazak.ahmed@darkom.design',
+        location: 'Kuwait'
+      },
+      achievements: t('about.teamMembers.abdulrazak.achievements')
+    },
+    {
+      name: t('about.teamMembers.yousif.name'),
+      position: t('about.teamMembers.yousif.position'),
+      image: '/images/yousifpic.webp',
+      description: t('about.teamMembers.yousif.description'),
+      expertise: t('about.teamMembers.yousif.expertise'),
+      fullBio: t('about.teamMembers.yousif.fullBio'),
+      contact: {
+        phone: '+965 0000 0000',
+        email: 'yousif@darkom.design',
+        location: 'Kuwait'
+      },
+      achievements: t('about.teamMembers.yousif.achievements')
+    },
+    {
+      name: 'Alaa Bouzan',
+      position: 'Head of HR',
+      image: '',
+      description: 'Bridging talent and culture with strategic leadership and people-first practices.',
+      expertise: ['Talent Acquisition', 'Culture Development', 'HR Strategy', 'Employee Relations'],
+      fullBio:
+        "Aisha Al-Mutairi leads Darkom's human resources strategy, combining more than a decade of experience in talent development, organizational culture, and employee engagement. She partners closely with every department to ensure our teams thrive, bringing empathy, structure, and a clear vision for growth.",
+      contact: {
+        phone: '+965 6000 1234',
+        email: 'alaa.bouzan@darkom.design',
+        location: 'Kuwait City'
+      },
+      achievements: [
+        'Implemented talent development programs that increased retention by 30%',
+        'Built a company-wide culture roadmap aligning HR initiatives with business goals',
+        "Launched Darkom's leadership mentoring cohort for emerging managers"
+      ],
+      fallbackIcon: UserCircle2
+    }
+  ]
+
+  const teamHighlights: { title: string; description: string; Icon: LucideIcon }[] = [
+    {
+      title: t('about.expertise.title'),
+      description: t('about.expertise.description'),
+      Icon: Building2
+    },
+    {
+      title: t('about.innovation.title'),
+      description: t('about.innovation.description'),
+      Icon: Sparkles
+    },
+    {
+      title: t('about.reliability.title'),
+      description: t('about.reliability.description'),
+      Icon: ShieldCheck
     }
   ]
 
@@ -118,17 +186,29 @@ const TeamContent = () => {
                 onClick={() => openProfile(member)}
               >
                 {/* Image Container - Full height, no cropping */}
-                <div className="relative h-96 overflow-hidden">
-                  <Image
-                    src={member.image}
-                    alt={member.name}
-                    fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
-                  {/* Subtle overlay on hover */}
-                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300" />
-                  
-                  {/* Click indicator */}
+                <div className="relative h-96 overflow-hidden bg-dark flex items-center justify-center">
+                  {member.image ? (
+                    <>
+                      <Image
+                        src={member.image}
+                        alt={member.name}
+                        fill
+                        className="object-cover group-hover:scale-105 transition-transform duration-500"
+                      />
+                      <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300" />
+                    </>
+                  ) : (
+                    <div className="flex flex-col items-center justify-center space-y-4 text-gold/80">
+                      {member.fallbackIcon ? (
+                        <member.fallbackIcon className="w-24 h-24" strokeWidth={1.5} />
+                      ) : (
+                        <UserCircle2 className="w-24 h-24" strokeWidth={1.5} />
+                      )}
+                      <span className="text-cream/70 text-sm tracking-[0.35em] uppercase">
+                        Team Member
+                      </span>
+                    </div>
+                  )}
                   <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     <div className="w-8 h-8 bg-gold rounded-full flex items-center justify-center">
                       <span className="text-dark text-sm font-bold">+</span>
@@ -309,40 +389,29 @@ const TeamContent = () => {
           </motion.div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            {[
-              {
-                title: t('about.expertise.title'),
-                description: t('about.expertise.description'),
-                icon: '🏗️'
-              },
-              {
-                title: t('about.innovation.title'),
-                description: t('about.innovation.description'),
-                icon: '💡'
-              },
-              {
-                title: t('about.reliability.title'),
-                description: t('about.reliability.description'),
-                icon: '✅'
-              }
-            ].map((feature, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="text-center p-6"
-              >
-                <div className="text-4xl mb-4">{feature.icon}</div>
-                <h3 className="text-xl font-playfair font-semibold text-gold mb-3">
-                  {feature.title}
-                </h3>
-                <p className="text-cream/80 leading-relaxed">
-                  {feature.description}
-                </p>
-              </motion.div>
-            ))}
+            {teamHighlights.map((feature, index) => {
+              const Icon = feature.Icon
+              return (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  className="text-center p-6 bg-dark rounded-2xl border border-gold/15"
+                >
+                  <div className="w-16 h-16 bg-gold/10 border border-gold/30 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Icon className="w-8 h-8 text-gold" strokeWidth={1.6} />
+                  </div>
+                  <h3 className="text-xl font-playfair font-semibold text-gold mb-3">
+                    {feature.title}
+                  </h3>
+                  <p className="text-cream/80 leading-relaxed">
+                    {feature.description}
+                  </p>
+                </motion.div>
+              )
+            })}
           </div>
         </div>
       </section>

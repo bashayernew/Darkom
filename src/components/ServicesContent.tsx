@@ -5,9 +5,13 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { useLanguage } from '@/contexts/LanguageContext'
 
-const ServicesContent = () => {
-  const { t } = useLanguage()
-  const services = [
+type ServicesContentProps = {
+  showPageHeader?: boolean
+}
+
+const ServicesContent = ({ showPageHeader = true }: ServicesContentProps) => {
+  const { t, language } = useLanguage()
+  const englishServices = [
     {
       icon: '/images/icon-construction.png',
       title: t('services.architecture.title'),
@@ -49,8 +53,69 @@ const ServicesContent = () => {
       description: t('services.renovation.description'),
       features: t('services.renovation.features'),
       href: '/contact'
+    },
+    {
+      icon: '/images/icon-construction.png',
+      title: t('services.construction.title'),
+      description: t('services.construction.description'),
+      features: t('services.construction.features'),
+      href: '/contact'
+    },
+    {
+      icon: '/images/icon-interior.png',
+      title: t('services.materials.title'),
+      description: t('services.materials.description'),
+      features: t('services.materials.features'),
+      href: '/contact'
     }
   ]
+
+  const arabicServices = [
+    {
+      icon: '/images/icon-design.png',
+      title: 'التصميم',
+      description: 'التصميم الداخلي والخارجي والواجهات والحدائق',
+      features: [
+        'إعداد المخططات الهندسية والمعمارية حسب المواصفات',
+        'استخدام برامج حديثة لضمان الدقة والجودة'
+      ],
+      href: '/contact'
+    },
+    {
+      icon: '/images/icon-construction.png',
+      title: 'التنفيذ',
+      description: 'تنفيذ المشاريع طبقًا للمواصفات والمخططات',
+      features: [
+        'تنفيذ المشاريع طبقًا للمواصفات والمخططات',
+        'الإشراف على جميع مراحل البناء والتشطيب'
+      ],
+      href: '/contact'
+    },
+    {
+      icon: '/images/icon-interior.png',
+      title: 'الخدمات',
+      description: 'صيانة وترميم المباني والمنشآت',
+      features: [
+        'صيانة وترميم المباني والمنشآت',
+        'تقديم الاستشارات الهندسية وخدمات ما بعد التنفيذ'
+      ],
+      href: '/contact'
+    },
+    {
+      icon: '/images/icon-landscape.png',
+      title: 'مواد البناء',
+      description: 'توريد رخام، عازل، حجر، خشب، سيراميك، لاصق من السعودية',
+      features: [
+        'توريد رخام، عازل، حجر، خشب، سيراميك، لاصق من السعودية',
+        'توريد أبواب',
+        'التعاون مع أفضل الموردين داخل وخارج الكويت',
+        'الالتزام بمعايير السلامة والجودة في اختيار المواد'
+      ],
+      href: '/contact'
+    }
+  ]
+
+  const services = language === 'ar' ? arabicServices : englishServices
 
   const processSteps = [
     {
@@ -82,45 +147,67 @@ const ServicesContent = () => {
 
   return (
     <>
-      {/* Page Header */}
-      <section className="relative pt-32 pb-20 bg-dark-gray overflow-hidden">
-        {/* Background Image */}
-        <div className="absolute inset-0 w-full h-full">
-          <Image
-            src="/images/consulting.jpg"
-            alt="Our Services Background"
-            fill
-            className="object-cover"
-            priority
-          />
-          {/* Dark overlay for better text readability */}
-          <div className="absolute inset-0 bg-black/60" />
-        </div>
-        
-        {/* Content */}
-        <div className="relative z-10 container mx-auto px-4 text-center">
-          <motion.h1
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-5xl md:text-6xl font-playfair font-bold text-gold mb-6"
-          >
-            {t('services.title')}
-          </motion.h1>
-          <motion.p
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-xl text-cream/80 max-w-3xl mx-auto"
-          >
-            {t('services.description')}
-          </motion.p>
-        </div>
-      </section>
+      {showPageHeader && (
+        <section className="relative pt-32 pb-20 bg-dark-gray overflow-hidden">
+          {/* Background Image */}
+          <div className="absolute inset-0 w-full h-full">
+            <Image
+              src="/images/consulting.jpg"
+              alt="Our Services Background"
+              fill
+              className="object-cover"
+              priority
+            />
+            {/* Dark overlay for better text readability */}
+            <div className="absolute inset-0 bg-black/60" />
+          </div>
+          
+          {/* Content */}
+          <div className="relative z-10 container mx-auto px-4 text-center">
+            <motion.h1
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-5xl md:text-6xl font-playfair font-bold text-gold mb-6"
+            >
+              {t('services.title')}
+            </motion.h1>
+            <motion.p
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="text-xl text-cream/80 max-w-3xl mx-auto"
+            >
+              {t('services.description')}
+            </motion.p>
+          </div>
+        </section>
+      )}
 
       {/* Services Grid */}
       <section className="py-20 bg-dark">
         <div className="container mx-auto px-4">
+          {language === 'ar' && (
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className="mb-12 text-right"
+              dir="rtl"
+            >
+              <span className="text-sm uppercase tracking-[0.3em] text-gold/70 block mb-3">
+                حلول متكاملة تلبي احتياجاتك
+              </span>
+              <h2 className="text-4xl md:text-5xl font-playfair font-bold text-gold mb-4">
+                نقدم مجموعة متكاملة من الخدمات
+              </h2>
+              <p className="text-cream/80 text-lg max-w-3xl ml-auto leading-relaxed">
+                نقدم مجموعة متكاملة من الخدمات التي تغطي التصميم والتنفيذ والإشراف وتوفير المواد، مع التزام كامل بالجودة والمعايير العالمية.
+              </p>
+            </motion.div>
+          )}
+
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
               <motion.div
@@ -132,21 +219,18 @@ const ServicesContent = () => {
                 whileHover={{ y: -10 }}
                 className="group"
               >
-                <Link href={service.href} className="block">
-                  <div className="bg-dark-gray p-8 rounded-lg h-full hover:bg-dark-gray/80 transition-all duration-300 border border-transparent hover:border-gold/30 group-hover:shadow-2xl group-hover:shadow-gold/10">
-                    {/* Service Icon */}
-                    <div className="mb-6 flex justify-center">
-                      <Image
-                        src={service.icon}
-                        alt={service.title}
-                        width={64}
-                        height={64}
-                        className="filter-gold"
-                      />
-                    </div>
-                    
+                <Link href={service.href} className="block" dir={language === 'ar' ? 'rtl' : 'ltr'}>
+                  <div
+                    className={`bg-dark-gray p-8 rounded-lg h-full hover:bg-dark-gray/80 transition-all duration-300 border border-transparent hover:border-gold/30 group-hover:shadow-2xl group-hover:shadow-gold/10 ${
+                      language === 'ar' ? 'text-right' : 'text-left'
+                    }`}
+                  >
                     {/* Service Title */}
-                    <h3 className="text-2xl font-playfair font-semibold text-gold mb-4 group-hover:text-gold/90 transition-colors">
+                    <h3
+                      className={`text-2xl font-playfair font-semibold text-gold mb-4 group-hover:text-gold/90 transition-colors ${
+                        language === 'ar' ? 'text-right' : ''
+                      }`}
+                    >
                       {service.title}
                     </h3>
                     
@@ -158,7 +242,10 @@ const ServicesContent = () => {
                     {/* Features List */}
                     <ul className="space-y-2 mb-6">
                       {service.features.map((feature: any, featureIndex: number) => (
-                        <li key={featureIndex} className="flex items-center space-x-2">
+                        <li
+                          key={featureIndex}
+                          className={`flex items-center gap-2 ${language === 'ar' ? 'flex-row-reverse' : ''}`}
+                        >
                           <div className="w-2 h-2 bg-gold rounded-full" />
                           <span className="text-cream/70 text-sm">{feature}</span>
                         </li>
@@ -176,7 +263,6 @@ const ServicesContent = () => {
           </div>
         </div>
       </section>
-
       {/* Design Process */}
       <section className="py-20 bg-dark-gray">
         <div className="container mx-auto px-4">
