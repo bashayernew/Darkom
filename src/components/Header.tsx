@@ -34,6 +34,7 @@ const Header = () => {
   const navItems = [
     { href: '/', label: t('navigation.home') },
     { href: '/about', label: t('navigation.about') },
+    { href: '/services', label: t('navigation.services') },
     { href: '/team', label: t('navigation.team') },
     { href: '/contact', label: t('navigation.contact') },
   ]

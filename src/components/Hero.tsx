@@ -98,47 +98,42 @@ const Hero = () => {
             priority
           />
         )}
+      </div>
 
-        {/* Overlay for better text readability */}
-        <div className="absolute inset-0 bg-black/30" />
+      {/* Text content below video */}
+      <div className="container mx-auto px-4 py-16 text-center max-w-4xl">
+        <motion.h1
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="heading-xl text-cream mb-6"
+        >
+          {t('hero.title')}
+          <span className="block text-gold">{t('hero.titleHighlight')}</span>
+        </motion.h1>
 
-        {/* Text content overlaid on video */}
-        <div className="absolute inset-0 flex items-start justify-center pt-20 md:pt-32">
-          <div className="container mx-auto px-4 text-center max-w-4xl relative z-10">
-            <motion.h1
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="heading-xl text-cream mb-6"
-            >
-              {t('hero.title')}
-              <span className="block text-gold">{t('hero.titleHighlight')}</span>
-            </motion.h1>
+        <motion.h2
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.3 }}
+          className="text-3xl md:text-4xl lg:text-5xl font-playfair font-bold text-gold mb-8 max-w-3xl mx-auto"
+        >
+          {t('hero.subtitle')}
+        </motion.h2>
 
-            <motion.p
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.3 }}
-              className="text-xl md:text-2xl text-cream/90 mb-8 max-w-3xl mx-auto"
-            >
-              {t('hero.subtitle')}
-            </motion.p>
-
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-              className="flex justify-center"
-            >
-              <Link
-                href="/contact"
-                className="btn btn-cta px-10 py-4 text-lg font-semibold rounded-full"
-              >
-                {t('hero.cta')}
-              </Link>
-            </motion.div>
-          </div>
-        </div>
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+          className="flex justify-center"
+        >
+          <Link
+            href="/contact"
+            className="btn btn-cta px-10 py-4 text-lg font-semibold rounded-full"
+          >
+            {t('hero.cta')}
+          </Link>
+        </motion.div>
       </div>
     </section>
   )

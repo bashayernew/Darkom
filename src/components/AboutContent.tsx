@@ -100,29 +100,46 @@ const AboutContent = () => {
               viewport={{ once: true }}
               className="mb-20"
             >
-              <div className="relative max-w-4xl mx-auto">
-                <div className="absolute -top-5 left-6 h-10 w-10 rounded-full bg-gold/30 blur-xl opacity-60" />
-                <div className="absolute -top-6 right-6 h-16 w-16 rounded-full bg-gold/20 blur-2xl opacity-70" />
-                <div className="relative bg-dark-gray/90 border border-gold/20 rounded-3xl p-8 sm:p-10 shadow-[0_25px_45px_-30px_rgba(196,158,87,0.4)] backdrop-blur">
-                  <div className="flex flex-col gap-6 text-left">
-                    <div className="space-y-2">
-                      <span className="text-sm uppercase tracking-[0.3em] text-gold/70">
-                        {t('about.about')}
-                      </span>
-                      <h2 className="heading-lg text-gold">
-                        {t('about.ourStory')}
-                      </h2>
-                    </div>
-                    <div className="space-y-5 text-cream/90 leading-relaxed text-lg">
-                      <p className="border-l-4 border-gold/60 pl-5">
-                        {t('about.storyText1')}
-                      </p>
-                      <p>
-                        {t('about.storyText2')}
-                      </p>
-                      <p>
-                        {t('about.storyText3')}
-                      </p>
+              <div className="grid lg:grid-cols-2 gap-12 items-start max-w-6xl mx-auto">
+                {/* Left: Story Image */}
+                <div className="relative w-full order-2 lg:order-1 lg:sticky lg:top-24">
+                  <div className="relative overflow-hidden rounded-2xl aspect-[4/3]">
+                    <Image
+                      src="/images/ourstoryimage.jpg"
+                      alt="Darkom Construction & Consulting - Our journey in architecture and construction"
+                      fill
+                      className="object-cover transition-transform duration-500 hover:scale-105"
+                      sizes="(max-width: 1024px) 100vw, 50vw"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
+                  </div>
+                </div>
+
+                {/* Right: Story Content */}
+                <div className="relative order-1 lg:order-2">
+                  <div className="absolute -top-5 left-6 h-10 w-10 rounded-full bg-gold/30 blur-xl opacity-60" />
+                  <div className="absolute -top-6 right-6 h-16 w-16 rounded-full bg-gold/20 blur-2xl opacity-70" />
+                  <div className="relative bg-dark-gray/90 border border-gold/20 rounded-3xl p-6 sm:p-8 shadow-[0_25px_45px_-30px_rgba(196,158,87,0.4)] backdrop-blur">
+                    <div className="flex flex-col gap-4 text-left">
+                      <div className="space-y-2">
+                        <span className="text-xs uppercase tracking-[0.3em] text-gold/70">
+                          {t('about.about')}
+                        </span>
+                        <h2 className="text-3xl md:text-4xl font-playfair font-bold text-gold">
+                          {t('about.ourStory')}
+                        </h2>
+                      </div>
+                      <div className="space-y-4 text-cream/90 leading-relaxed text-base">
+                        <p className="border-l-4 border-gold/60 pl-4">
+                          {t('about.storyText1')}
+                        </p>
+                        <p>
+                          {t('about.storyText2')}
+                        </p>
+                        <p>
+                          {t('about.storyText3')}
+                        </p>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -175,14 +192,14 @@ const AboutContent = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.3 }}
               viewport={{ once: true }}
-              className="grid lg:grid-cols-2 gap-12 items-center mb-20"
+              className="grid lg:grid-cols-2 gap-12 items-start mb-20"
             >
               {/* Left: Team Collaboration Content */}
               <div className="space-y-4 flex flex-col justify-center w-full max-w-xl mx-auto lg:mx-0">
-                <h2 className="heading-lg text-gold text-center lg:text-left">
+                <h2 className="text-3xl md:text-4xl font-playfair font-bold text-gold text-center lg:text-left">
                   {t('about.collaborativeExcellence')}
                 </h2>
-                <div className="space-y-2 text-cream/90 leading-relaxed text-lg text-center lg:text-left">
+                <div className="space-y-3 text-cream/90 leading-relaxed text-base text-center lg:text-left">
                   <p>
                     {t('about.collaborativeText1')}
                   </p>
@@ -196,13 +213,13 @@ const AboutContent = () => {
               </div>
 
               {/* Right: Team Collaboration Image */}
-              <div className="relative w-full max-w-lg lg:max-w-md mx-auto lg:mx-0">
+              <div className="relative w-full max-w-lg lg:max-w-md mx-auto lg:mx-0 lg:sticky lg:top-24">
                 <div className="relative overflow-hidden rounded-2xl aspect-[4/3]">
                   <Image
-                    src="/images/team-construction-site.jpg"
-                    alt="Team of professionals working together on construction site"
+                    src="/images/CollaborativeExcellenceiamge.jpg"
+                    alt="Team collaboration and construction excellence"
                     fill
-                    className="object-cover"
+                    className="object-cover transition-transform duration-500 hover:scale-105"
                     sizes="(max-width: 1024px) 100vw, 50vw"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
@@ -291,36 +308,6 @@ const AboutContent = () => {
         </div>
       </section>
 
-      {/* Meet Our Team CTA */}
-      <section className="py-16 bg-dark">
-        <div className="container mx-auto px-4 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="max-w-3xl mx-auto"
-          >
-            <h2 className="text-4xl md:text-5xl font-playfair font-bold text-gold mb-6">
-              {t('about.meetTeam')}
-            </h2>
-            <p className="text-xl text-cream/80 mb-8 leading-relaxed">
-              {t('about.meetTeamDesc')}
-            </p>
-            <motion.div
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              <Link
-                href="/team"
-                className="btn btn-cta px-8 py-4 text-lg font-semibold rounded-full inline-block"
-              >
-                {t('about.meetTeamCta')}
-              </Link>
-            </motion.div>
-          </motion.div>
-        </div>
-      </section>
     </>
   )
 }

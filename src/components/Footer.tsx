@@ -16,9 +16,9 @@ const Footer = () => {
   }
 
   return (
-    <footer className="bg-dark text-cream py-6">
-      <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 text-center items-start">
+    <footer className="bg-dark text-cream py-6 border-t border-gold/20">
+      <div className="container mx-auto px-4 max-w-7xl">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-2 text-center items-start">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -75,65 +75,66 @@ const Footer = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
             viewport={{ once: true }}
-            className="space-y-3"
+            className="space-y-6"
           >
-            <h3 className="text-base font-playfair font-semibold text-gold">{t('footer.quickLinks')}</h3>
-            <div className="flex flex-wrap justify-center gap-3 text-xs">
-              <Link href="/" className="text-cream/80 hover:text-gold transition-colors duration-300">
-                {t('navigation.home')}
-              </Link>
-              <Link href="/about" className="text-cream/80 hover:text-gold transition-colors duration-300">
-                {t('navigation.about')}
-              </Link>
-              <Link href="/team" className="text-cream/80 hover:text-gold transition-colors duration-300">
-                {t('navigation.team')}
-              </Link>
-              <Link href="/contact" className="text-cream/80 hover:text-gold transition-colors duration-300">
-                {t('navigation.contact')}
-              </Link>
+            {/* Quick Links Section */}
+            <div className="space-y-3 text-center ml-4 sm:ml-6">
+              <h3 className="text-base font-playfair font-semibold text-gold">{t('footer.quickLinks')}</h3>
+              <div className="flex flex-row flex-wrap justify-center items-center gap-x-4 gap-y-2 text-xs">
+                <Link href="/" className="text-cream/80 hover:text-gold transition-colors duration-300 whitespace-nowrap">
+                  {t('navigation.home')}
+                </Link>
+                <Link href="/about" className="text-cream/80 hover:text-gold transition-colors duration-300 whitespace-nowrap">
+                  {t('navigation.about')}
+                </Link>
+                <Link href="/services" className="text-cream/80 hover:text-gold transition-colors duration-300 whitespace-nowrap">
+                  {t('navigation.services')}
+                </Link>
+                <Link href="/team" className="text-cream/80 hover:text-gold transition-colors duration-300 whitespace-nowrap">
+                  {t('navigation.team')}
+                </Link>
+                <Link href="/contact" className="text-cream/80 hover:text-gold transition-colors duration-300 whitespace-nowrap">
+                  {t('navigation.contact')}
+                </Link>
+              </div>
             </div>
-          </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            viewport={{ once: true }}
-            className="text-xs"
-          >
-            <h3 className="text-base font-playfair font-semibold text-gold mb-4">{t('footer.getInTouch')}</h3>
-            <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-3 text-center">
-              <div className="flex items-center gap-2 justify-center lg:justify-start lg:text-left max-w-[220px]">
-                <MapPin className="w-3.5 h-3.5 text-gold flex-shrink-0" />
-                <a
-                  href="https://maps.google.com/?q=Shuwaikh+Industrial+1+Block+2+Street+13+Kuwait+City+Kuwait"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-cream/80 hover:text-gold transition-colors duration-300"
-                >
-                  Shuwaikh Industrial 1 - Block 2, Street 13, Kuwait City
-                </a>
-              </div>
-              <div className="flex items-center gap-2 justify-center lg:justify-start whitespace-nowrap">
-                <Phone className="w-3.5 h-3.5 text-gold flex-shrink-0" />
-                <a href="tel:+96597759069" className="text-cream/80 hover:text-gold transition-colors duration-300">
-                  +965 9775 9069
-                </a>
-              </div>
-              <div className="flex items-center gap-2 justify-center lg:justify-start whitespace-nowrap">
-                <MessageCircle className="w-3.5 h-3.5 text-gold flex-shrink-0" />
-                <button
-                  onClick={handleWhatsAppClick}
-                  className="text-cream/80 hover:text-gold transition-colors duration-300"
-                >
-                  {t('contact.chatWhatsapp')}
-                </button>
-              </div>
-              <div className="flex items-center gap-2 justify-center lg:justify-start whitespace-nowrap">
-                <Mail className="w-3.5 h-3.5 text-gold flex-shrink-0" />
-                <a href="mailto:hello@darkom.design" className="text-cream/80 hover:text-gold transition-colors duration-300">
-                  hello@darkom.design
-                </a>
+            {/* Get In Touch Section */}
+            <div className="space-y-3 ml-2 sm:ml-4">
+              <h3 className="text-base font-playfair font-semibold text-gold">{t('footer.getInTouch')}</h3>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs max-w-md mx-auto sm:mx-0 sm:ml-auto">
+                <div className="flex items-center gap-2 justify-center sm:justify-start">
+                  <MapPin className="w-3.5 h-3.5 text-gold flex-shrink-0" />
+                  <a
+                    href="https://maps.google.com/?q=Shuwaikh+Industrial+1+Block+2+Street+13+Kuwait+City+Kuwait"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-cream/80 hover:text-gold transition-colors duration-300 text-center sm:text-left"
+                  >
+                    Shuwaikh Industrial 1 - Block 2, Street 13, Kuwait City
+                  </a>
+                </div>
+                <div className="flex items-center gap-2 justify-center sm:justify-start">
+                  <Phone className="w-3.5 h-3.5 text-gold flex-shrink-0" />
+                  <a href="tel:+96597759069" className="text-cream/80 hover:text-gold transition-colors duration-300">
+                    +965 9775 9069
+                  </a>
+                </div>
+                <div className="flex items-center gap-2 justify-center sm:justify-start">
+                  <MessageCircle className="w-3.5 h-3.5 text-gold flex-shrink-0" />
+                  <button
+                    onClick={handleWhatsAppClick}
+                    className="text-cream/80 hover:text-gold transition-colors duration-300"
+                  >
+                    {t('contact.chatWhatsapp')}
+                  </button>
+                </div>
+                <div className="flex items-center gap-2 justify-center sm:justify-start">
+                  <Mail className="w-3.5 h-3.5 text-gold flex-shrink-0" />
+                  <a href="mailto:hello@darkom.design" className="text-cream/80 hover:text-gold transition-colors duration-300">
+                    hello@darkom.design
+                  </a>
+                </div>
               </div>
             </div>
           </motion.div>

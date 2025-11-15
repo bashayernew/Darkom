@@ -71,20 +71,6 @@ const TeamContent = () => {
       achievements: t('about.teamMembers.abdulrazak.achievements')
     },
     {
-      name: t('about.teamMembers.yousif.name'),
-      position: t('about.teamMembers.yousif.position'),
-      image: '/images/yousifpic.webp',
-      description: t('about.teamMembers.yousif.description'),
-      expertise: t('about.teamMembers.yousif.expertise'),
-      fullBio: t('about.teamMembers.yousif.fullBio'),
-      contact: {
-        phone: '+965 0000 0000',
-        email: 'yousif@darkom.design',
-        location: 'Kuwait'
-      },
-      achievements: t('about.teamMembers.yousif.achievements')
-    },
-    {
       name: 'Alaa Bouzan',
       position: 'Head of HR',
       image: '',
@@ -372,7 +358,7 @@ const TeamContent = () => {
 
       {/* Why Choose Our Team */}
       <section className="py-20 bg-dark-gray">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-4 max-w-7xl">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -388,61 +374,36 @@ const TeamContent = () => {
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            {teamHighlights.map((feature, index) => {
-              const Icon = feature.Icon
-              return (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="text-center p-6 bg-dark rounded-2xl border border-gold/15"
-                >
-                  <div className="w-16 h-16 bg-gold/10 border border-gold/30 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Icon className="w-8 h-8 text-gold" strokeWidth={1.6} />
-                  </div>
-                  <h3 className="text-xl font-playfair font-semibold text-gold mb-3">
-                    {feature.title}
-                  </h3>
-                  <p className="text-cream/80 leading-relaxed">
-                    {feature.description}
-                  </p>
-                </motion.div>
-              )
-            })}
+          <div className="flex justify-center">
+            <div className="grid md:grid-cols-3 gap-8 max-w-6xl w-full">
+              {teamHighlights.map((feature, index) => {
+                const Icon = feature.Icon
+                return (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                    viewport={{ once: true }}
+                    className="text-center p-6 bg-dark rounded-2xl border border-gold/15"
+                  >
+                    <div className="w-16 h-16 bg-gold/10 border border-gold/30 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <Icon className="w-8 h-8 text-gold" strokeWidth={1.6} />
+                    </div>
+                    <h3 className="text-xl font-playfair font-semibold text-gold mb-3">
+                      {feature.title}
+                    </h3>
+                    <p className="text-cream/80 leading-relaxed">
+                      {feature.description}
+                    </p>
+                  </motion.div>
+                )
+              })}
+            </div>
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 bg-dark">
-        <div className="container mx-auto px-4 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="max-w-3xl mx-auto"
-          >
-            <h2 className="text-4xl md:text-5xl font-playfair font-bold text-gold mb-6">
-              {t('about.readyToWork')}
-            </h2>
-            <p className="text-xl text-cream/80 mb-8 leading-relaxed">
-              {t('about.readyToWorkDesc')}
-            </p>
-            <motion.a
-              href="/contact"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="btn btn-gold px-8 py-4 text-lg font-semibold rounded-full inline-block hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300"
-            >
-              {t('about.getStartedToday')}
-            </motion.a>
-          </motion.div>
-        </div>
-      </section>
     </>
   )
 }

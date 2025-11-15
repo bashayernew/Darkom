@@ -141,8 +141,28 @@ const BookingModal = ({ isOpen, onClose, serviceType }: BookingModalProps) => {
     setIsSubmitting(true)
     
     try {
-      // Simulate API call - placeholder for email submission
-      await new Promise(resolve => setTimeout(resolve, 1000))
+      // Send booking to API endpoint
+      const response = await fetch('/api/submit-booking', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          message: formData.message,
+          date: formData.date,
+          time: formData.time,
+          serviceType: serviceType
+        }),
+      })
+
+      const result = await response.json()
+
+      if (!response.ok) {
+        throw new Error(result.error || 'Failed to submit booking')
+      }
       
       setSubmitSuccess(true)
       setFormData({
@@ -162,8 +182,9 @@ const BookingModal = ({ isOpen, onClose, serviceType }: BookingModalProps) => {
         onClose()
         setSubmitSuccess(false)
       }, 2000)
-    } catch (error) {
-      console.error('Error submitting form:', error)
+    } catch (error: any) {
+      console.error('Error submitting booking:', error)
+      setErrors({ submit: error.message || 'Failed to submit booking. Please try again.' })
     } finally {
       setIsSubmitting(false)
     }
@@ -389,6 +410,12 @@ const BookingModal = ({ isOpen, onClose, serviceType }: BookingModalProps) => {
                   placeholder={t('booking.placeholderMessage')}
                 />
               </div>
+
+              {errors.submit && (
+                <div className="p-3 bg-red-500/20 border border-red-500/50 rounded-lg text-red-400 text-sm text-center">
+                  {errors.submit}
+                </div>
+              )}
 
               <button
                 type="submit"

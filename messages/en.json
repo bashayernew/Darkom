@@ -9,7 +9,7 @@
   "hero": {
     "title": "Building amazing",
     "titleHighlight": "architecture design",
-    "subtitle": "Transform your vision into reality with our luxury construction and design services",
+    "subtitle": "where form meets feeling",
     "cta": "Book Consultation"
   },
   "intro": {
@@ -97,6 +97,11 @@
     "hoverText": "Hover or tap to see details",
     "learnMore": "Learn More",
     "cta": "Our Services",
+    "readyToWork": {
+      "title": "Ready to Work With Our Team?",
+      "description": "Let's discuss your project and see how our expert team can bring your vision to life.",
+      "cta": "Get Started Today"
+    },
     "process": {
       "title": "Our Process",
       "description": "From concept to completion, we follow a proven process to ensure your project's success",
@@ -120,6 +125,30 @@
         "title": "Completion",
         "description": "Final walkthrough and handover of your completed project."
       }
+    },
+    "readyToStart": {
+      "title": "Ready to Work With Our Team?",
+      "description": "Let's discuss your vision and see how our expert team can bring it to life.",
+      "getQuotation": "Get a Quotation",
+      "submitCV": "Submit Your CV"
+    },
+    "cvSubmission": {
+      "title": "Join Our Team",
+      "description": "We're always looking for talented professionals to join our team. Submit your CV and let's explore opportunities together.",
+      "fullName": "Full Name",
+      "email": "Email Address",
+      "phone": "Phone Number",
+      "position": "Position of Interest",
+      "cvFile": "Upload CV (PDF)",
+      "message": "Cover Letter (Optional)",
+      "submit": "Submit CV",
+      "submitting": "Submitting...",
+      "success": "Thank you! Your CV has been submitted successfully. We'll review it and get back to you soon.",
+      "placeholderName": "Enter your full name",
+      "placeholderEmail": "Enter your email address",
+      "placeholderPhone": "Enter your phone number",
+      "placeholderPosition": "e.g., Architect, Interior Designer, Project Manager",
+      "placeholderMessage": "Tell us about yourself and why you'd like to join our team..."
     }
   },
   "certifications": {
@@ -318,7 +347,7 @@
     "openInMaps": "Open in Google Maps",
     "officeHours": "Office Hours",
     "officeHoursText": "Sun - Thu: 8:00 AM - 6:00 PM",
-    "officeHoursClosed": "Fri - Sat: Closed",
+    "officeHoursClosed": "Fri: Closed",
     "placeholderFullName": "Enter your full name",
     "placeholderPhone": "Enter your phone number",
     "placeholderEmail": "Enter your email address",
