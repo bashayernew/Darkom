@@ -7,7 +7,7 @@ import { useLanguage } from '@/contexts/LanguageContext'
 import LanguageSwitcher from './LanguageSwitcher'
 
 const Footer = () => {
-  const { t } = useLanguage()
+  const { t, language } = useLanguage()
   
   const handleWhatsAppClick = () => {
     const message = "Hello! I'd like to get in touch with Darkom Construction & Consulting."
@@ -75,34 +75,12 @@ const Footer = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
             viewport={{ once: true }}
-            className="space-y-6"
+            className="space-y-6 flex flex-col items-center"
           >
-            {/* Quick Links Section */}
-            <div className="space-y-3 text-center ml-4 sm:ml-6">
-              <h3 className="text-base font-playfair font-semibold text-gold">{t('footer.quickLinks')}</h3>
-              <div className="flex flex-row flex-wrap justify-center items-center gap-x-4 gap-y-2 text-xs">
-                <Link href="/" className="text-cream/80 hover:text-gold transition-colors duration-300 whitespace-nowrap">
-                  {t('navigation.home')}
-                </Link>
-                <Link href="/about" className="text-cream/80 hover:text-gold transition-colors duration-300 whitespace-nowrap">
-                  {t('navigation.about')}
-                </Link>
-                <Link href="/services" className="text-cream/80 hover:text-gold transition-colors duration-300 whitespace-nowrap">
-                  {t('navigation.services')}
-                </Link>
-                <Link href="/team" className="text-cream/80 hover:text-gold transition-colors duration-300 whitespace-nowrap">
-                  {t('navigation.team')}
-                </Link>
-                <Link href="/contact" className="text-cream/80 hover:text-gold transition-colors duration-300 whitespace-nowrap">
-                  {t('navigation.contact')}
-                </Link>
-              </div>
-            </div>
-
             {/* Get In Touch Section */}
-            <div className="space-y-3 ml-2 sm:ml-4">
+            <div className="space-y-3 text-center w-full">
               <h3 className="text-base font-playfair font-semibold text-gold">{t('footer.getInTouch')}</h3>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs max-w-md mx-auto sm:mx-0 sm:ml-auto">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs max-w-md mx-auto">
                 <div className="flex items-center gap-2 justify-center sm:justify-start">
                   <MapPin className="w-3.5 h-3.5 text-gold flex-shrink-0" />
                   <a
@@ -111,7 +89,7 @@ const Footer = () => {
                     rel="noopener noreferrer"
                     className="text-cream/80 hover:text-gold transition-colors duration-300 text-center sm:text-left"
                   >
-                    Shuwaikh Industrial 1 - Block 2, Street 13, Kuwait City
+                    {t('contact.address')}
                   </a>
                 </div>
                 <div className="flex items-center gap-2 justify-center sm:justify-start">

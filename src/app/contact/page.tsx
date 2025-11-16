@@ -277,7 +277,7 @@ export default function Contact() {
                   {t('contact.headOffice')}
                 </h3>
                 <p className="text-cream/80 text-lg">
-                  Shuwaikh Industrial 1 - Block 2, Street 13, Kuwait City
+                  {t('contact.address')}
                 </p>
               </div>
             </div>

@@ -312,6 +312,18 @@
           "Ensures compliance with safety and hygiene standards",
           "Coordinates maintenance schedules and quality control"
         ]
+      },
+      "alaa": {
+        "name": "Alaa Bouzan",
+        "position": "Head of HR",
+        "description": "Bridging talent and culture with strategic leadership and people-first practices.",
+        "expertise": ["Talent Acquisition", "Culture Development", "HR Strategy", "Employee Relations"],
+        "fullBio": "Alaa Bouzan leads Darkom's human resources strategy, combining more than a decade of experience in talent development, organizational culture, and employee engagement. She partners closely with every department to ensure our teams thrive, bringing empathy, structure, and a clear vision for growth.",
+        "achievements": [
+          "Implemented talent development programs that increased retention by 30%",
+          "Built a company-wide culture roadmap aligning HR initiatives with business goals",
+          "Launched Darkom's leadership mentoring cohort for emerging managers"
+        ]
       }
     }
   },
@@ -345,6 +357,7 @@
     "findUs": "Find Us",
     "findUsDesc": "Visit our head office or get in touch to discuss your project requirements",
     "openInMaps": "Open in Google Maps",
+    "address": "Shuwaikh Industrial 1 - Block 2, Street 13, Kuwait City",
     "officeHours": "Office Hours",
     "officeHoursText": "Sun - Thu: 8:00 AM - 6:00 PM",
     "officeHoursClosed": "Fri: Closed",
