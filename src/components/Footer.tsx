@@ -77,6 +77,28 @@ const Footer = () => {
             viewport={{ once: true }}
             className="space-y-6 flex flex-col items-center"
           >
+            {/* Quick Links Section */}
+            <div className={`space-y-3 text-center w-full ${language === 'en' ? 'mr-10 sm:mr-16' : ''}`}>
+              <h3 className="text-base font-playfair font-semibold text-gold">{t('footer.quickLinks')}</h3>
+              <div className="flex flex-row flex-wrap justify-center items-center gap-x-4 gap-y-2 text-xs" dir="ltr">
+                <Link href="/" className="text-cream/80 hover:text-gold transition-colors duration-300 whitespace-nowrap">
+                  {t('navigation.home')}
+                </Link>
+                <Link href="/about" className="text-cream/80 hover:text-gold transition-colors duration-300 whitespace-nowrap">
+                  {t('navigation.about')}
+                </Link>
+                <Link href="/services" className="text-cream/80 hover:text-gold transition-colors duration-300 whitespace-nowrap">
+                  {t('navigation.services')}
+                </Link>
+                <Link href="/team" className="text-cream/80 hover:text-gold transition-colors duration-300 whitespace-nowrap">
+                  {t('navigation.team')}
+                </Link>
+                <Link href="/contact" className="text-cream/80 hover:text-gold transition-colors duration-300 whitespace-nowrap">
+                  {t('navigation.contact')}
+                </Link>
+              </div>
+            </div>
+
             {/* Get In Touch Section */}
             <div className="space-y-3 text-center w-full">
               <h3 className="text-base font-playfair font-semibold text-gold">{t('footer.getInTouch')}</h3>
