@@ -113,14 +113,14 @@ const Services = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="relative h-80 perspective-1000"
+              className="relative h-80 perspective-1000 overflow-hidden"
               onMouseEnter={() => setFlippedCard(index)}
               onMouseLeave={() => setFlippedCard(null)}
               onTouchStart={() => setFlippedCard(flippedCard === index ? null : index)}
             >
               {/* Card Front */}
               <motion.div
-                className="absolute inset-0 w-full h-full bg-dark rounded-2xl border border-gold/20 p-6 cursor-pointer"
+                className="absolute inset-0 w-full h-full bg-dark rounded-2xl border border-gold/20 p-6 cursor-pointer overflow-hidden"
                 animate={{ 
                   rotateY: flippedCard === index ? 180 : 0,
                 }}
@@ -142,33 +142,33 @@ const Services = () => {
 
               {/* Card Back */}
               <motion.div
-                className="absolute inset-0 w-full h-full bg-gold/10 rounded-2xl border border-gold p-6 cursor-pointer"
+                className="absolute inset-0 w-full h-full bg-gold/10 rounded-2xl border border-gold p-6 cursor-pointer overflow-hidden"
                 animate={{ 
                   rotateY: flippedCard === index ? 0 : -180,
                 }}
                 transition={{ duration: 0.6 }}
                 style={{ backfaceVisibility: 'hidden' }}
               >
-                <div className="flex flex-col h-full justify-between">
-                  <div>
-                    <h3 className="text-xl font-playfair font-semibold text-gold mb-4 text-center">
+                <div className="flex flex-col h-full justify-between overflow-hidden">
+                  <div className="overflow-y-auto flex-1 min-h-0">
+                    <h3 className="text-xl font-playfair font-semibold text-gold mb-3 text-center">
                       {service.title}
                     </h3>
-                    <p className="text-cream/80 text-sm leading-relaxed mb-4 text-center">
+                    <p className="text-cream/80 text-sm leading-relaxed mb-3 text-center break-words">
                       {service.description}
                     </p>
-                    <ul className="space-y-2">
+                    <ul className="space-y-1.5">
                       {service.features.map((feature, featureIndex) => (
-                        <li key={featureIndex} className="text-cream/70 text-xs flex items-center">
-                          <div className="w-1.5 h-1.5 bg-gold rounded-full mr-2"></div>
-                          {feature}
+                        <li key={featureIndex} className="text-cream/70 text-xs flex items-start break-words">
+                          <div className="w-1.5 h-1.5 bg-gold rounded-full mr-2 mt-1.5 flex-shrink-0"></div>
+                          <span className="flex-1">{feature}</span>
                         </li>
                       ))}
                     </ul>
                   </div>
                   <Link
                     href="/services"
-                    className="w-full btn btn-gold py-2 text-sm font-semibold rounded-lg hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300 text-center"
+                    className="w-full btn btn-gold py-2 text-sm font-semibold rounded-lg hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300 text-center mt-4 flex-shrink-0"
                   >
                     {t('services.learnMore')}
                   </Link>
