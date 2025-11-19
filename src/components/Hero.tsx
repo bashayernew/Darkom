@@ -72,7 +72,7 @@ const Hero = () => {
 
   return (
     <section className="bg-dark">
-      <div className="relative w-full h-[90vh] min-h-[600px] overflow-hidden">
+      <div className="relative w-full h-[50vh] sm:h-[60vh] md:h-[70vh] lg:h-[90vh] min-h-[400px] md:min-h-[500px] lg:min-h-[600px] overflow-hidden">
         {!videoError ? (
           <video
             ref={videoRef}
@@ -101,12 +101,12 @@ const Hero = () => {
       </div>
 
       {/* Text content below video */}
-      <div className="container mx-auto px-4 py-16 text-center max-w-4xl">
+      <div className="container mx-auto px-4 py-8 sm:py-12 md:py-16 text-center max-w-4xl">
         <motion.h1
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="heading-xl text-cream mb-6"
+          className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-playfair font-bold text-cream mb-4 sm:mb-6"
         >
           {t('hero.title')}
           <span className="block text-gold">{t('hero.titleHighlight')}</span>
@@ -116,7 +116,7 @@ const Hero = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.3 }}
-          className="text-3xl md:text-4xl lg:text-5xl font-playfair font-bold text-gold mb-8 max-w-3xl mx-auto"
+          className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-playfair font-bold text-gold mb-6 sm:mb-8 max-w-3xl mx-auto px-2"
         >
           {t('hero.subtitle')}
         </motion.h2>
@@ -125,11 +125,11 @@ const Hero = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="flex justify-center"
+          className="flex justify-center px-4"
         >
           <Link
             href="/contact"
-            className="btn btn-cta px-10 py-4 text-lg font-semibold rounded-full"
+            className="btn btn-cta px-6 sm:px-8 md:px-10 py-3 sm:py-3.5 md:py-4 text-base sm:text-lg font-semibold rounded-full w-full sm:w-auto"
           >
             {t('hero.cta')}
           </Link>
